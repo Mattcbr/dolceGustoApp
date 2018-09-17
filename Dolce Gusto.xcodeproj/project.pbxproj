@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F8EF771214ED9730069FDDC /* MainScreenCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EF770214ED9730069FDDC /* MainScreenCollectionViewCell.m */; };
+		2F8EF776214EE4D30069FDDC /* MainScreenCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EF775214EE4D30069FDDC /* MainScreenCollectionViewController.m */; };
 		2FF43F0D2145AFB9004718C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF43F0C2145AFB9004718C6 /* AppDelegate.m */; };
-		2FF43F102145AFB9004718C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF43F0F2145AFB9004718C6 /* ViewController.m */; };
 		2FF43F132145AFB9004718C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF43F112145AFB9004718C6 /* Main.storyboard */; };
 		2FF43F152145AFBA004718C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF43F142145AFBA004718C6 /* Assets.xcassets */; };
 		2FF43F182145AFBA004718C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF43F162145AFBA004718C6 /* LaunchScreen.storyboard */; };
@@ -35,11 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F8EF76F214ED9730069FDDC /* MainScreenCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenCollectionViewCell.h; sourceTree = "<group>"; };
+		2F8EF770214ED9730069FDDC /* MainScreenCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenCollectionViewCell.m; sourceTree = "<group>"; };
+		2F8EF775214EE4D30069FDDC /* MainScreenCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenCollectionViewController.m; sourceTree = "<group>"; };
+		2FA35FDA2145B3D700737CDD /* MainScreenCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenCollectionViewController.h; sourceTree = "<group>"; };
 		2FF43F082145AFB8004718C6 /* Dolce Gusto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dolce Gusto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF43F0B2145AFB8004718C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2FF43F0C2145AFB9004718C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2FF43F0E2145AFB9004718C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2FF43F0F2145AFB9004718C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2FF43F122145AFB9004718C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FF43F142145AFBA004718C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FF43F172145AFBA004718C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +81,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FA35FDD2145B3E200737CDD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F8EF76F214ED9730069FDDC /* MainScreenCollectionViewCell.h */,
+				2F8EF770214ED9730069FDDC /* MainScreenCollectionViewCell.m */,
+				2FA35FDA2145B3D700737CDD /* MainScreenCollectionViewController.h */,
+				2F8EF775214EE4D30069FDDC /* MainScreenCollectionViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		2FF43EFF2145AFB8004718C6 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +115,9 @@
 		2FF43F0A2145AFB8004718C6 /* Dolce Gusto */ = {
 			isa = PBXGroup;
 			children = (
+				2FA35FDD2145B3E200737CDD /* View Controllers */,
 				2FF43F0B2145AFB8004718C6 /* AppDelegate.h */,
 				2FF43F0C2145AFB9004718C6 /* AppDelegate.m */,
-				2FF43F0E2145AFB9004718C6 /* ViewController.h */,
-				2FF43F0F2145AFB9004718C6 /* ViewController.m */,
 				2FF43F112145AFB9004718C6 /* Main.storyboard */,
 				2FF43F142145AFBA004718C6 /* Assets.xcassets */,
 				2FF43F162145AFBA004718C6 /* LaunchScreen.storyboard */,
@@ -262,9 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FF43F102145AFB9004718C6 /* ViewController.m in Sources */,
 				2FF43F1B2145AFBA004718C6 /* main.m in Sources */,
+				2F8EF771214ED9730069FDDC /* MainScreenCollectionViewCell.m in Sources */,
 				2FF43F0D2145AFB9004718C6 /* AppDelegate.m in Sources */,
+				2F8EF776214EE4D30069FDDC /* MainScreenCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
