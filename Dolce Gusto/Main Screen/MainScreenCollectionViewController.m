@@ -7,6 +7,7 @@
 //
 
 #import "MainScreenCollectionViewController.h"
+#import "MainScreenViewModel.h"
 
 @interface MainScreenCollectionViewController ()
 
@@ -31,15 +32,8 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
 }
 
 -(void)addCoffee {
-    UIAlertController *notAvailableAlert = [UIAlertController alertControllerWithTitle:@"Not Available"
-                                                                               message:@"Sorry, but the function to add new coffee types is not available yet."
-                                                                        preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
-    [notAvailableAlert addAction:defaultAction];
-    [self presentViewController:notAvailableAlert animated:YES completion:nil];
+    UIAlertController *noCoffeeAlert = [[MainScreenViewModel alloc] CoffeeNotAvailableAlert];
+    [self presentViewController:noCoffeeAlert animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

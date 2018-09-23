@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F53441421582E3800BF0D77 /* MainScreenViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53441321582E3800BF0D77 /* MainScreenViewPresenter.m */; };
+		2F53441721582E4F00BF0D77 /* MainScreenViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53441621582E4F00BF0D77 /* MainScreenViewModel.m */; };
 		2F8EF771214ED9730069FDDC /* MainScreenCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EF770214ED9730069FDDC /* MainScreenCollectionViewCell.m */; };
 		2F8EF776214EE4D30069FDDC /* MainScreenCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EF775214EE4D30069FDDC /* MainScreenCollectionViewController.m */; };
 		2FF43F0D2145AFB9004718C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF43F0C2145AFB9004718C6 /* AppDelegate.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F53441221582E3800BF0D77 /* MainScreenViewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenViewPresenter.h; sourceTree = "<group>"; };
+		2F53441321582E3800BF0D77 /* MainScreenViewPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewPresenter.m; sourceTree = "<group>"; };
+		2F53441521582E4F00BF0D77 /* MainScreenViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenViewModel.h; sourceTree = "<group>"; };
+		2F53441621582E4F00BF0D77 /* MainScreenViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewModel.m; sourceTree = "<group>"; };
 		2F8EF76F214ED9730069FDDC /* MainScreenCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenCollectionViewCell.h; sourceTree = "<group>"; };
 		2F8EF770214ED9730069FDDC /* MainScreenCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenCollectionViewCell.m; sourceTree = "<group>"; };
 		2F8EF775214EE4D30069FDDC /* MainScreenCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenCollectionViewController.m; sourceTree = "<group>"; };
@@ -81,15 +87,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2FA35FDD2145B3E200737CDD /* View Controllers */ = {
+		2F53440F21582BA600BF0D77 /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2F53441021582BC300BF0D77 /* Cell */,
+				2FA35FDA2145B3D700737CDD /* MainScreenCollectionViewController.h */,
+				2F8EF775214EE4D30069FDDC /* MainScreenCollectionViewController.m */,
+				2F53441221582E3800BF0D77 /* MainScreenViewPresenter.h */,
+				2F53441321582E3800BF0D77 /* MainScreenViewPresenter.m */,
+				2F53441521582E4F00BF0D77 /* MainScreenViewModel.h */,
+				2F53441621582E4F00BF0D77 /* MainScreenViewModel.m */,
+			);
+			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+		2F53441021582BC300BF0D77 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				2F8EF76F214ED9730069FDDC /* MainScreenCollectionViewCell.h */,
 				2F8EF770214ED9730069FDDC /* MainScreenCollectionViewCell.m */,
-				2FA35FDA2145B3D700737CDD /* MainScreenCollectionViewController.h */,
-				2F8EF775214EE4D30069FDDC /* MainScreenCollectionViewController.m */,
 			);
-			path = "View Controllers";
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		2FF43EFF2145AFB8004718C6 = {
@@ -115,7 +133,7 @@
 		2FF43F0A2145AFB8004718C6 /* Dolce Gusto */ = {
 			isa = PBXGroup;
 			children = (
-				2FA35FDD2145B3E200737CDD /* View Controllers */,
+				2F53440F21582BA600BF0D77 /* Main Screen */,
 				2FF43F0B2145AFB8004718C6 /* AppDelegate.h */,
 				2FF43F0C2145AFB9004718C6 /* AppDelegate.m */,
 				2FF43F112145AFB9004718C6 /* Main.storyboard */,
@@ -278,7 +296,9 @@
 				2FF43F1B2145AFBA004718C6 /* main.m in Sources */,
 				2F8EF771214ED9730069FDDC /* MainScreenCollectionViewCell.m in Sources */,
 				2FF43F0D2145AFB9004718C6 /* AppDelegate.m in Sources */,
+				2F53441421582E3800BF0D77 /* MainScreenViewPresenter.m in Sources */,
 				2F8EF776214EE4D30069FDDC /* MainScreenCollectionViewController.m in Sources */,
+				2F53441721582E4F00BF0D77 /* MainScreenViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
