@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xUW-Uf-Mzh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xUW-Uf-Mzh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -91,14 +91,89 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="L0C-Im-oQU"/>
+                    <connections>
+                        <segue destination="8Eg-0P-4N3" kind="presentation" id="cri-GD-nKc"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tro-wY-fye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="425" y="9"/>
         </scene>
+        <!--Add new-->
+        <scene sceneID="zXA-t1-WDl">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z10-wI-gKa" customClass="addCoffeeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fd7-XB-URU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWD-Vy-EUj">
+                                <rect key="frame" x="37.5" y="350.5" width="300" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nescafe_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="zoB-Kl-hA8">
+                                <rect key="frame" x="87.5" y="149" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="xS8-T2-lOK"/>
+                                    <constraint firstAttribute="width" constant="200" id="zzh-O3-2sk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="tWD-Vy-EUj" firstAttribute="width" secondItem="fd7-XB-URU" secondAttribute="width" multiplier="0.8" id="C5Q-t5-PEB"/>
+                            <constraint firstItem="tWD-Vy-EUj" firstAttribute="firstBaseline" secondItem="zoB-Kl-hA8" secondAttribute="baseline" constant="21" symbolType="layoutAnchor" id="EXg-2d-A10"/>
+                            <constraint firstItem="zoB-Kl-hA8" firstAttribute="centerX" secondItem="aX3-sV-4Ie" secondAttribute="centerX" id="Qqe-GP-Te1"/>
+                            <constraint firstItem="tWD-Vy-EUj" firstAttribute="centerY" secondItem="aX3-sV-4Ie" secondAttribute="centerY" id="hRl-dk-YMq"/>
+                            <constraint firstItem="tWD-Vy-EUj" firstAttribute="centerX" secondItem="aX3-sV-4Ie" secondAttribute="centerX" id="wXr-ET-dGy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aX3-sV-4Ie"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add new" id="1th-Ch-yHJ">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="CZy-dq-Oe0">
+                            <connections>
+                                <action selector="dismissModal" destination="Z10-wI-gKa" id="KjA-J5-Qxq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="zM7-Q0-2Yl">
+                            <connections>
+                                <action selector="didPressSave" destination="Z10-wI-gKa" id="fb3-tG-YGS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="coffeeNameField" destination="tWD-Vy-EUj" id="vOY-YR-3x7"/>
+                        <outlet property="testImageView" destination="zoB-Kl-hA8" id="v4M-cp-ewI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZn-Jp-O6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2151.1999999999998" y="4.9475262368815596"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ANa-h2-nk3">
+            <objects>
+                <navigationController storyboardIdentifier="addCoffeeViewController" automaticallyAdjustsScrollViewInsets="NO" id="8Eg-0P-4N3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zMJ-Zq-xnq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Z10-wI-gKa" kind="relationship" relationship="rootViewController" id="TOW-zu-lSf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8p-tP-tS1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="4.9475262368815596"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Capsula_Generica" width="225" height="225"/>
+        <image name="Nescafe_Logo" width="400" height="400"/>
     </resources>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
 </document>

@@ -13,17 +13,4 @@
 -(void)awakeFromNib {
     [super awakeFromNib];
 }
-
--(UIAlertController *)CoffeeNotAvailableAlert {
-    UIAlertController *notAvailableAlert = [UIAlertController alertControllerWithTitle:@"Not Available"
-                                                                               message:@"Sorry, but the function to add new coffee types is not available yet."
-                                                                        preferredStyle:UIAlertControllerStyleAlert];
-
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
-    [notAvailableAlert addAction:defaultAction];
-    return notAvailableAlert;
-}
-
 @end

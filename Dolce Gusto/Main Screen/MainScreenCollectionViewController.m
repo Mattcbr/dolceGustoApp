@@ -8,8 +8,12 @@
 
 #import "MainScreenCollectionViewController.h"
 #import "MainScreenViewModel.h"
+#import "MainScreenViewPresenter.h"
+#import "addCoffeeViewController.h"
 
 @interface MainScreenCollectionViewController ()
+
+@property (strong, nonatomic) MainScreenViewPresenter *presenter;
 
 @end
 
@@ -20,26 +24,65 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.presenter = [[MainScreenViewPresenter alloc] init];
+    [self.presenter initWithViewController:self]; // Move up
+    
     //NavBar Stuff
     UIBarButtonItem *addCoffeeButton = [[UIBarButtonItem alloc]
                                    initWithTitle:@"Add"
                                    style:UIBarButtonItemStylePlain
                                    target:self
-                                   action:@selector(addCoffee)];
+                                   action:@selector(didPressAddCoffee)];
     
     self.navigationItem.rightBarButtonItem = addCoffeeButton;
     self.navigationItem.title = @"Dolce Gusto";
 }
 
--(void)addCoffee {
-    UIAlertController *noCoffeeAlert = [[MainScreenViewModel alloc] CoffeeNotAvailableAlert];
-    [self presentViewController:noCoffeeAlert animated:YES completion:nil];
+-(void)didPressAddCoffee {
+    [self.presenter didPressAddCoffee];
+}
+
+-(void)presentAddAlert {
+    UIAlertController *typeSelectAlert = [UIAlertController alertControllerWithTitle:@"Add new"
+                                                                             message:@"What do you want to add?"
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* recipeAction = [UIAlertAction actionWithTitle:@"Recipe"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+                                                              [self didPressRecipe];
+                                                          }];
+    UIAlertAction* capsuleAction = [UIAlertAction actionWithTitle:@"Capsule"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+                                                              [self didPressCapsule];
+                                                          }];
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                            style:UIAlertActionStyleCancel
+                                                          handler:^(UIAlertAction * action) {}];
+    [typeSelectAlert addAction:recipeAction];
+    [typeSelectAlert addAction:capsuleAction];
+    [typeSelectAlert addAction:cancelAction];
+    [self presentViewController:typeSelectAlert animated:TRUE completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+-(void)didPressRecipe {
+    
+}
+
+-(void)didPressCapsule {
+//    UIViewController *capsuleVC= [[addCoffeeViewController alloc]init];
+//    [self presentViewController:capsuleVC animated:false completion:nil];
+    
+    NSString * storyboardName = @"Main";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"addCoffeeViewController"];
+    [self presentViewController:vc animated:YES completion:nil];
+}
 /*
 #pragma mark - Navigation
 

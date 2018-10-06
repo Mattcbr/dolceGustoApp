@@ -10,4 +10,12 @@
 
 @implementation MainScreenViewPresenter
 
+-(void)initWithViewController: (MainScreenCollectionViewController *)viewController {
+    self.controller = viewController;
+}
+
+-(void)didPressAddCoffee{
+    [self.controller presentAddAlert];
+}
+
 @end

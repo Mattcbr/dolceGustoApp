@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainScreenViewModel : UICollectionView
+@interface MainScreenViewModel : NSObject
 
 -(UIAlertController *)CoffeeNotAvailableAlert;
 

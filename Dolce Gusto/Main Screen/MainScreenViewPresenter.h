@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainScreenCollectionViewController.h"
 
-@interface MainScreenViewPresenter : UICollectionView
+@interface MainScreenViewPresenter : NSObject
+
+-(void)initWithViewController: (MainScreenCollectionViewController *)viewController;
+-(void)didPressAddCoffee;
+@property (weak,nonatomic) MainScreenCollectionViewController *controller;
 
 @end
