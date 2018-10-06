@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,14 +19,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nescafe_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="GIw-F5-c3f">
-                                <rect key="frame" x="57" y="210.5" width="262.5" height="266.5"/>
+                                <rect key="frame" x="87.5" y="243.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Aom-wJ-4Up"/>
+                                    <constraint firstAttribute="height" constant="200" id="lMN-B4-az4"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="GIw-F5-c3f" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.4" id="OSq-M7-IAY"/>
                             <constraint firstItem="GIw-F5-c3f" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ZLp-z1-c0M"/>
-                            <constraint firstItem="GIw-F5-c3f" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.7" id="hNk-J2-sQP"/>
                             <constraint firstItem="GIw-F5-c3f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="w3f-5r-sa0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

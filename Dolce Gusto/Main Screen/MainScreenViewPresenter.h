@@ -11,8 +11,8 @@
 
 @interface MainScreenViewPresenter : NSObject
 
--(void)initWithViewController: (MainScreenCollectionViewController *)viewController;
--(void)didPressAddCoffee;
+-(instancetype)initWithViewController: (MainScreenCollectionViewController *)viewController;
+-(void)didPressAdd;
 @property (weak,nonatomic) MainScreenCollectionViewController *controller;
 
 @end

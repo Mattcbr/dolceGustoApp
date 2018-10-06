@@ -24,24 +24,19 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.presenter = [[MainScreenViewPresenter alloc] init];
-    [self.presenter initWithViewController:self]; // Move up
-    
-    //NavBar Stuff
-    UIBarButtonItem *addCoffeeButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Add"
-                                   style:UIBarButtonItemStylePlain
-                                   target:self
-                                   action:@selector(didPressAddCoffee)];
-    
-    self.navigationItem.rightBarButtonItem = addCoffeeButton;
-    self.navigationItem.title = @"Dolce Gusto";
+    self.presenter = [[MainScreenViewPresenter alloc] initWithViewController:self];
 }
 
--(void)didPressAddCoffee {
-    [self.presenter didPressAddCoffee];
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Add Button Handler
+-(IBAction)didPressAdd {
+    [self.presenter didPressAdd];
+}
+
+#pragma mark - Alerts
 -(void)presentAddAlert {
     UIAlertController *typeSelectAlert = [UIAlertController alertControllerWithTitle:@"Add new"
                                                                              message:@"What do you want to add?"
@@ -66,22 +61,13 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
     [self presentViewController:typeSelectAlert animated:TRUE completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
+#pragma mark - Add Coffe Alert Handlers
 -(void)didPressRecipe {
     
 }
 
 -(void)didPressCapsule {
-//    UIViewController *capsuleVC= [[addCoffeeViewController alloc]init];
-//    [self presentViewController:capsuleVC animated:false completion:nil];
-    
-    NSString * storyboardName = @"Main";
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"addCoffeeViewController"];
-    [self presentViewController:vc animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"showAddScreenSegue" sender:self];
 }
 /*
 #pragma mark - Navigation
