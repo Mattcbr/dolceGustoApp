@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AddCoffeeViewController : UIViewController
 
+@property NSString *screenType;
+
 @end
 
 NS_ASSUME_NONNULL_END

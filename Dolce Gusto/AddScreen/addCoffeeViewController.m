@@ -17,11 +17,15 @@
 
 @implementation AddCoffeeViewController
 
+- (void)viewDidLoad{
+    self.navigationItem.title = [NSString stringWithFormat:@"Add %@",self.screenType];
+}
+
 - (IBAction)didPressSave {
     
 }
 
-- (IBAction)dismissModal {
+- (IBAction)dismissScreen {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 /*

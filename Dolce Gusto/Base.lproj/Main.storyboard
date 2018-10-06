@@ -113,7 +113,7 @@
         <!--Add new-->
         <scene sceneID="zXA-t1-WDl">
             <objects>
-                <viewController storyboardIdentifier="addNewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z10-wI-gKa" customClass="addCoffeeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addNewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z10-wI-gKa" customClass="AddCoffeeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fd7-XB-URU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,19 +145,23 @@
                     <navigationItem key="navigationItem" title="Add new" id="1th-Ch-yHJ">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="CZy-dq-Oe0">
                             <connections>
-                                <action selector="dismissModal" destination="Z10-wI-gKa" id="KjA-J5-Qxq"/>
+                                <action selector="dismissScreen" destination="Z10-wI-gKa" id="y6a-6f-gCt"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="zM7-Q0-2Yl">
                             <connections>
-                                <action selector="didPressSave" destination="Z10-wI-gKa" id="fb3-tG-YGS"/>
+                                <action selector="didPressSave" destination="Z10-wI-gKa" id="x0L-mK-dwL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="coffeeNameField" destination="tWD-Vy-EUj" id="ayn-9u-DpG"/>
+                        <outlet property="testImageView" destination="zoB-Kl-hA8" id="DGe-5x-Xpx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZn-Jp-O6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2119" y="-742"/>
+            <point key="canvasLocation" x="1222" y="-736"/>
         </scene>
     </scenes>
     <resources>

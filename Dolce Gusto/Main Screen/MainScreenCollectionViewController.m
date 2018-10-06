@@ -69,15 +69,17 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
 -(void)didPressCapsule {
     [self performSegueWithIdentifier:@"showAddScreenSegue" sender:self];
 }
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+     if([segue.identifier isEqualToString:@"showAddScreenSegue"]){
+         AddCoffeeViewController *destinationVC = segue.destinationViewController;
+         destinationVC.screenType = @"Capsule";
+     }
 }
-*/
+
 
 #pragma mark <UICollectionViewDataSource>
 
