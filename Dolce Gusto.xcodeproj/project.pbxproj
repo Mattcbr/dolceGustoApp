@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F336C73216AA3690059EC3E /* AddCoffeePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F336C72216AA3690059EC3E /* AddCoffeePresenter.m */; };
 		2F53441421582E3800BF0D77 /* MainScreenViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53441321582E3800BF0D77 /* MainScreenViewPresenter.m */; };
 		2F53441721582E4F00BF0D77 /* MainScreenViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53441621582E4F00BF0D77 /* MainScreenViewModel.m */; };
-		2F6CE9732164510A009793D7 /* addCoffeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CE9722164510A009793D7 /* addCoffeeViewController.m */; };
+		2F6CE9732164510A009793D7 /* AddCoffeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CE9722164510A009793D7 /* AddCoffeeViewController.m */; };
 		2F8EF771214ED9730069FDDC /* MainScreenCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EF770214ED9730069FDDC /* MainScreenCollectionViewCell.m */; };
 		2F8EF776214EE4D30069FDDC /* MainScreenCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EF775214EE4D30069FDDC /* MainScreenCollectionViewController.m */; };
 		2FF43F0D2145AFB9004718C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF43F0C2145AFB9004718C6 /* AppDelegate.m */; };
@@ -39,12 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F336C71216AA3690059EC3E /* AddCoffeePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddCoffeePresenter.h; sourceTree = "<group>"; };
+		2F336C72216AA3690059EC3E /* AddCoffeePresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCoffeePresenter.m; sourceTree = "<group>"; };
 		2F53441221582E3800BF0D77 /* MainScreenViewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenViewPresenter.h; sourceTree = "<group>"; };
 		2F53441321582E3800BF0D77 /* MainScreenViewPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewPresenter.m; sourceTree = "<group>"; };
 		2F53441521582E4F00BF0D77 /* MainScreenViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenViewModel.h; sourceTree = "<group>"; };
 		2F53441621582E4F00BF0D77 /* MainScreenViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewModel.m; sourceTree = "<group>"; };
-		2F6CE9712164510A009793D7 /* addCoffeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addCoffeeViewController.h; sourceTree = "<group>"; };
-		2F6CE9722164510A009793D7 /* addCoffeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addCoffeeViewController.m; sourceTree = "<group>"; };
+		2F6CE9712164510A009793D7 /* AddCoffeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddCoffeeViewController.h; sourceTree = "<group>"; };
+		2F6CE9722164510A009793D7 /* AddCoffeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCoffeeViewController.m; sourceTree = "<group>"; };
 		2F8EF76F214ED9730069FDDC /* MainScreenCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenCollectionViewCell.h; sourceTree = "<group>"; };
 		2F8EF770214ED9730069FDDC /* MainScreenCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenCollectionViewCell.m; sourceTree = "<group>"; };
 		2F8EF775214EE4D30069FDDC /* MainScreenCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreenCollectionViewController.m; sourceTree = "<group>"; };
@@ -116,8 +119,10 @@
 		2F6CE970216450CB009793D7 /* AddScreen */ = {
 			isa = PBXGroup;
 			children = (
-				2F6CE9712164510A009793D7 /* addCoffeeViewController.h */,
-				2F6CE9722164510A009793D7 /* addCoffeeViewController.m */,
+				2F6CE9712164510A009793D7 /* AddCoffeeViewController.h */,
+				2F6CE9722164510A009793D7 /* AddCoffeeViewController.m */,
+				2F336C71216AA3690059EC3E /* AddCoffeePresenter.h */,
+				2F336C72216AA3690059EC3E /* AddCoffeePresenter.m */,
 			);
 			path = AddScreen;
 			sourceTree = "<group>";
@@ -306,13 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F336C73216AA3690059EC3E /* AddCoffeePresenter.m in Sources */,
 				2FF43F1B2145AFBA004718C6 /* main.m in Sources */,
 				2F8EF771214ED9730069FDDC /* MainScreenCollectionViewCell.m in Sources */,
 				2FF43F0D2145AFB9004718C6 /* AppDelegate.m in Sources */,
 				2F53441421582E3800BF0D77 /* MainScreenViewPresenter.m in Sources */,
 				2F8EF776214EE4D30069FDDC /* MainScreenCollectionViewController.m in Sources */,
 				2F53441721582E4F00BF0D77 /* MainScreenViewModel.m in Sources */,
-				2F6CE9732164510A009793D7 /* addCoffeeViewController.m in Sources */,
+				2F6CE9732164510A009793D7 /* AddCoffeeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -114,34 +114,52 @@
         <scene sceneID="zXA-t1-WDl">
             <objects>
                 <viewController storyboardIdentifier="addNewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z10-wI-gKa" customClass="AddCoffeeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fd7-XB-URU">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="dve-TT-baW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Capsule name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWD-Vy-EUj">
-                                <rect key="frame" x="37.5" y="350.5" width="300" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nescafe_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZTL-V5-ddh">
+                                <rect key="frame" x="87.5" y="10" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="PqD-Vg-cwy"/>
+                                    <constraint firstAttribute="width" constant="200" id="emo-oj-V1T"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HBm-e4-Veq">
+                                <rect key="frame" x="37.5" y="200" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1U6-7q-leV"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nescafe_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="zoB-Kl-hA8">
-                                <rect key="frame" x="87.5" y="149" width="200" height="200"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oJG-wo-9tN">
+                                <rect key="frame" x="37" y="240" width="301" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="xS8-T2-lOK"/>
-                                    <constraint firstAttribute="width" constant="200" id="zzh-O3-2sk"/>
+                                    <constraint firstAttribute="height" constant="180" id="FwY-ng-VT4"/>
                                 </constraints>
-                            </imageView>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="tWD-Vy-EUj" firstAttribute="width" secondItem="fd7-XB-URU" secondAttribute="width" multiplier="0.8" id="C5Q-t5-PEB"/>
-                            <constraint firstItem="tWD-Vy-EUj" firstAttribute="firstBaseline" secondItem="zoB-Kl-hA8" secondAttribute="baseline" constant="21" symbolType="layoutAnchor" id="EXg-2d-A10"/>
-                            <constraint firstItem="zoB-Kl-hA8" firstAttribute="centerX" secondItem="aX3-sV-4Ie" secondAttribute="centerX" id="Qqe-GP-Te1"/>
-                            <constraint firstItem="tWD-Vy-EUj" firstAttribute="centerY" secondItem="aX3-sV-4Ie" secondAttribute="centerY" id="hRl-dk-YMq"/>
-                            <constraint firstItem="tWD-Vy-EUj" firstAttribute="centerX" secondItem="aX3-sV-4Ie" secondAttribute="centerX" id="wXr-ET-dGy"/>
+                            <constraint firstItem="HBm-e4-Veq" firstAttribute="width" secondItem="dve-TT-baW" secondAttribute="width" multiplier="0.8" id="8GL-Si-ShD"/>
+                            <constraint firstItem="oJG-wo-9tN" firstAttribute="centerX" secondItem="5rk-MH-wOg" secondAttribute="centerX" id="B6R-qQ-984"/>
+                            <constraint firstItem="ZTL-V5-ddh" firstAttribute="bottom" secondItem="HBm-e4-Veq" secondAttribute="top" constant="10" id="Fxo-uL-oyG"/>
+                            <constraint firstAttribute="trailing" secondItem="ZTL-V5-ddh" secondAttribute="trailing" constant="68" id="JCV-Zb-FGT"/>
+                            <constraint firstItem="ZTL-V5-ddh" firstAttribute="centerX" secondItem="5rk-MH-wOg" secondAttribute="centerX" id="MdX-vf-B3Y"/>
+                            <constraint firstItem="HBm-e4-Veq" firstAttribute="centerX" secondItem="5rk-MH-wOg" secondAttribute="centerX" id="MmU-Jf-jz3"/>
+                            <constraint firstItem="ZTL-V5-ddh" firstAttribute="top" secondItem="5rk-MH-wOg" secondAttribute="top" constant="10" id="Oc2-OI-9di"/>
+                            <constraint firstItem="ZTL-V5-ddh" firstAttribute="centerX" secondItem="dve-TT-baW" secondAttribute="centerX" id="RBW-r3-UOa"/>
+                            <constraint firstItem="oJG-wo-9tN" firstAttribute="width" secondItem="dve-TT-baW" secondAttribute="width" multiplier="0.8" constant="1" id="XsL-gF-vya"/>
+                            <constraint firstItem="oJG-wo-9tN" firstAttribute="top" secondItem="HBm-e4-Veq" secondAttribute="bottom" constant="10" id="eQb-fa-ZOD"/>
+                            <constraint firstItem="5rk-MH-wOg" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oJG-wo-9tN" secondAttribute="bottom" constant="10" id="gtY-Lf-MXU"/>
+                            <constraint firstItem="ZTL-V5-ddh" firstAttribute="top" secondItem="dve-TT-baW" secondAttribute="top" constant="10" id="nG6-kM-WCA"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="aX3-sV-4Ie"/>
-                    </view>
+                        <viewLayoutGuide key="safeArea" id="5rk-MH-wOg"/>
+                    </scrollView>
                     <navigationItem key="navigationItem" title="Add new" id="1th-Ch-yHJ">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="CZy-dq-Oe0">
                             <connections>
@@ -155,8 +173,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="coffeeNameField" destination="tWD-Vy-EUj" id="ayn-9u-DpG"/>
-                        <outlet property="testImageView" destination="zoB-Kl-hA8" id="DGe-5x-Xpx"/>
+                        <outlet property="cofeeDescriptionTextView" destination="oJG-wo-9tN" id="sQm-Ua-chX"/>
+                        <outlet property="coffeeNameField" destination="HBm-e4-Veq" id="HzC-hw-boh"/>
+                        <outlet property="testImageView" destination="ZTL-V5-ddh" id="gKy-rf-N9R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZn-Jp-O6M" userLabel="First Responder" sceneMemberID="firstResponder"/>

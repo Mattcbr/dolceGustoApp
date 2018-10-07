@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddCoffeePresenter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AddCoffeeViewController : UIViewController
 
 @property NSString *screenType;
+@property NSString *coffeeType;
 
 @end
 

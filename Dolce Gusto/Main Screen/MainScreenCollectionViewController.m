@@ -9,11 +9,13 @@
 #import "MainScreenCollectionViewController.h"
 #import "MainScreenViewModel.h"
 #import "MainScreenViewPresenter.h"
-#import "addCoffeeViewController.h"
+#import "AddCoffeeViewController.h"
 
 @interface MainScreenCollectionViewController ()
 
 @property (strong, nonatomic) MainScreenViewPresenter *presenter;
+@property NSString *addAlertScreenType;
+@property NSString *addAlertCoffeeType;
 
 @end
 
@@ -63,10 +65,14 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
 
 #pragma mark - Add Coffe Alert Handlers
 -(void)didPressRecipe {
-    
+    self.addAlertScreenType = @"Add";
+    self.addAlertCoffeeType = @"recipe";
+    [self performSegueWithIdentifier:@"showAddScreenSegue" sender:self];
 }
 
 -(void)didPressCapsule {
+    self.addAlertScreenType = @"Add";
+    self.addAlertCoffeeType = @"capsule";
     [self performSegueWithIdentifier:@"showAddScreenSegue" sender:self];
 }
 
@@ -76,7 +82,8 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
      if([segue.identifier isEqualToString:@"showAddScreenSegue"]){
          AddCoffeeViewController *destinationVC = segue.destinationViewController;
-         destinationVC.screenType = @"Capsule";
+         destinationVC.screenType = self.addAlertScreenType;
+         destinationVC.coffeeType = self.addAlertCoffeeType;
      }
 }
 

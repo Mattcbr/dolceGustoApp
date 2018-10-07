@@ -6,23 +6,37 @@
 //  Copyright © 2018 mattcbr. All rights reserved.
 //
 
-#import "addCoffeeViewController.h"
+#import "AddCoffeeViewController.h"
 
 @interface AddCoffeeViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *coffeeNameField;
 @property (weak, nonatomic) IBOutlet UIImageView *testImageView;
+@property (weak, nonatomic) IBOutlet UITextView *cofeeDescriptionTextView;
+@property (strong, nonatomic) AddCoffeePresenter *presenter;
 
 @end
 
 @implementation AddCoffeeViewController
 
 - (void)viewDidLoad{
-    self.navigationItem.title = [NSString stringWithFormat:@"Add %@",self.screenType];
+    
+    self.presenter = [[AddCoffeePresenter alloc] initWithViewController:self];
+    
+    self.navigationItem.title = [NSString stringWithFormat:@"%@ %@",self.screenType, self.coffeeType];
+    if ([self.coffeeType isEqualToString: @"recipe"]){
+        self.cofeeDescriptionTextView.hidden = false;
+    } else {
+        self.cofeeDescriptionTextView.hidden = true;
+    }
 }
 
 - (IBAction)didPressSave {
-    
+    if([self.coffeeType isEqualToString: @"recipe"]){
+        [self.presenter saveRecipe];
+    } else if ([self.coffeeType isEqualToString: @"capsule"]){
+        [self.presenter saveCapsuleWithName: self.coffeeNameField.text];
+    }
 }
 
 - (IBAction)dismissScreen {
