@@ -26,7 +26,7 @@
 }
 
 - (IBAction)dismissScreen {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 /*
 #pragma mark - Navigation
