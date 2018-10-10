@@ -11,6 +11,4 @@
 
 @interface MainScreenCollectionViewController : UICollectionViewController
 
--(void) presentAddAlert;
-
 @end

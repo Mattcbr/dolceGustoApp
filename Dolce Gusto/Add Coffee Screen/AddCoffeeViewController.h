@@ -7,9 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AddCoffeePresenter.h"
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface AddCoffeeViewController : UIViewController
 
@@ -17,5 +14,3 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *coffeeType;
 
 @end
-
-NS_ASSUME_NONNULL_END

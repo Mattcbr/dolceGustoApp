@@ -7,6 +7,7 @@
 //
 
 #import "AddCoffeeViewController.h"
+#import "AddCoffeePresenter.h"
 
 @interface AddCoffeeViewController ()
 
@@ -19,24 +20,14 @@
 
 @implementation AddCoffeeViewController
 
-- (void)viewDidLoad{
-    
+- (void)viewDidLoad {
     self.presenter = [[AddCoffeePresenter alloc] initWithViewController:self];
     
-    self.navigationItem.title = [NSString stringWithFormat:@"%@ %@",self.screenType, self.coffeeType];
-    if ([self.coffeeType isEqualToString: @"recipe"]){
-        self.cofeeDescriptionTextView.hidden = false;
-    } else {
-        self.cofeeDescriptionTextView.hidden = true;
-    }
+    self.navigationItem.title = [NSString stringWithFormat:@"%@ Coffee",self.screenType];
 }
 
-- (IBAction)didPressSave {
-    if([self.coffeeType isEqualToString: @"recipe"]){
-        [self.presenter saveRecipe];
-    } else if ([self.coffeeType isEqualToString: @"capsule"]){
-        [self.presenter saveCapsuleWithName: self.coffeeNameField.text];
-    }
+- (IBAction)didPressNext {
+    
 }
 
 - (IBAction)dismissScreen {

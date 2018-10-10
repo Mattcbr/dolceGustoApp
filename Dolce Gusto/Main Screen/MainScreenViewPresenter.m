@@ -18,8 +18,5 @@
     }
     return self;
 }
--(void)didPressAdd{
-    [self.controller presentAddAlert];
-}
 
 @end

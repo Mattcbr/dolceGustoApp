@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F1C7864216D8592007067E4 /* CapsulesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C7863216D8592007067E4 /* CapsulesListViewController.m */; };
+		2F1C7868216D8604007067E4 /* AddCapsuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C7867216D8604007067E4 /* AddCapsuleViewController.m */; };
+		2F1C786C216D8663007067E4 /* CapsulesListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C786B216D8663007067E4 /* CapsulesListPresenter.m */; };
+		2F1C786F216D8675007067E4 /* AddCapsulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C786E216D8675007067E4 /* AddCapsulePresenter.m */; };
 		2F336C73216AA3690059EC3E /* AddCoffeePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F336C72216AA3690059EC3E /* AddCoffeePresenter.m */; };
 		2F53441421582E3800BF0D77 /* MainScreenViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53441321582E3800BF0D77 /* MainScreenViewPresenter.m */; };
-		2F53441721582E4F00BF0D77 /* MainScreenViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53441621582E4F00BF0D77 /* MainScreenViewModel.m */; };
 		2F6CE9732164510A009793D7 /* AddCoffeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CE9722164510A009793D7 /* AddCoffeeViewController.m */; };
 		2F8EF771214ED9730069FDDC /* MainScreenCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EF770214ED9730069FDDC /* MainScreenCollectionViewCell.m */; };
 		2F8EF776214EE4D30069FDDC /* MainScreenCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EF775214EE4D30069FDDC /* MainScreenCollectionViewController.m */; };
@@ -40,12 +43,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F1C7862216D8592007067E4 /* CapsulesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CapsulesListViewController.h; sourceTree = "<group>"; };
+		2F1C7863216D8592007067E4 /* CapsulesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapsulesListViewController.m; sourceTree = "<group>"; };
+		2F1C7866216D8604007067E4 /* AddCapsuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AddCapsuleViewController.h; path = "Dolce Gusto/Add Capsule Screen/AddCapsuleViewController.h"; sourceTree = SOURCE_ROOT; };
+		2F1C7867216D8604007067E4 /* AddCapsuleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AddCapsuleViewController.m; path = "Dolce Gusto/Add Capsule Screen/AddCapsuleViewController.m"; sourceTree = SOURCE_ROOT; };
+		2F1C786A216D8663007067E4 /* CapsulesListPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CapsulesListPresenter.h; sourceTree = "<group>"; };
+		2F1C786B216D8663007067E4 /* CapsulesListPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapsulesListPresenter.m; sourceTree = "<group>"; };
+		2F1C786D216D8675007067E4 /* AddCapsulePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddCapsulePresenter.h; sourceTree = "<group>"; };
+		2F1C786E216D8675007067E4 /* AddCapsulePresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCapsulePresenter.m; sourceTree = "<group>"; };
 		2F336C71216AA3690059EC3E /* AddCoffeePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddCoffeePresenter.h; sourceTree = "<group>"; };
 		2F336C72216AA3690059EC3E /* AddCoffeePresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCoffeePresenter.m; sourceTree = "<group>"; };
 		2F53441221582E3800BF0D77 /* MainScreenViewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenViewPresenter.h; sourceTree = "<group>"; };
 		2F53441321582E3800BF0D77 /* MainScreenViewPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewPresenter.m; sourceTree = "<group>"; };
-		2F53441521582E4F00BF0D77 /* MainScreenViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenViewModel.h; sourceTree = "<group>"; };
-		2F53441621582E4F00BF0D77 /* MainScreenViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewModel.m; sourceTree = "<group>"; };
 		2F6CE9712164510A009793D7 /* AddCoffeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddCoffeeViewController.h; sourceTree = "<group>"; };
 		2F6CE9722164510A009793D7 /* AddCoffeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCoffeeViewController.m; sourceTree = "<group>"; };
 		2F8EF76F214ED9730069FDDC /* MainScreenCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenCollectionViewCell.h; sourceTree = "<group>"; };
@@ -93,6 +102,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F1C7865216D859B007067E4 /* Capsules List Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2F1C7862216D8592007067E4 /* CapsulesListViewController.h */,
+				2F1C7863216D8592007067E4 /* CapsulesListViewController.m */,
+				2F1C786A216D8663007067E4 /* CapsulesListPresenter.h */,
+				2F1C786B216D8663007067E4 /* CapsulesListPresenter.m */,
+			);
+			path = "Capsules List Screen";
+			sourceTree = "<group>";
+		};
+		2F1C7869216D8613007067E4 /* Add Capsule Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2F1C7866216D8604007067E4 /* AddCapsuleViewController.h */,
+				2F1C7867216D8604007067E4 /* AddCapsuleViewController.m */,
+				2F1C786D216D8675007067E4 /* AddCapsulePresenter.h */,
+				2F1C786E216D8675007067E4 /* AddCapsulePresenter.m */,
+			);
+			path = "Add Capsule Screen";
+			sourceTree = "<group>";
+		};
 		2F53440F21582BA600BF0D77 /* Main Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,8 +132,6 @@
 				2F8EF775214EE4D30069FDDC /* MainScreenCollectionViewController.m */,
 				2F53441221582E3800BF0D77 /* MainScreenViewPresenter.h */,
 				2F53441321582E3800BF0D77 /* MainScreenViewPresenter.m */,
-				2F53441521582E4F00BF0D77 /* MainScreenViewModel.h */,
-				2F53441621582E4F00BF0D77 /* MainScreenViewModel.m */,
 			);
 			path = "Main Screen";
 			sourceTree = "<group>";
@@ -116,7 +145,7 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		2F6CE970216450CB009793D7 /* AddScreen */ = {
+		2F6CE970216450CB009793D7 /* Add Coffee Screen */ = {
 			isa = PBXGroup;
 			children = (
 				2F6CE9712164510A009793D7 /* AddCoffeeViewController.h */,
@@ -124,7 +153,7 @@
 				2F336C71216AA3690059EC3E /* AddCoffeePresenter.h */,
 				2F336C72216AA3690059EC3E /* AddCoffeePresenter.m */,
 			);
-			path = AddScreen;
+			path = "Add Coffee Screen";
 			sourceTree = "<group>";
 		};
 		2FF43EFF2145AFB8004718C6 = {
@@ -150,8 +179,10 @@
 		2FF43F0A2145AFB8004718C6 /* Dolce Gusto */ = {
 			isa = PBXGroup;
 			children = (
-				2F6CE970216450CB009793D7 /* AddScreen */,
 				2F53440F21582BA600BF0D77 /* Main Screen */,
+				2F6CE970216450CB009793D7 /* Add Coffee Screen */,
+				2F1C7865216D859B007067E4 /* Capsules List Screen */,
+				2F1C7869216D8613007067E4 /* Add Capsule Screen */,
 				2FF43F0B2145AFB8004718C6 /* AppDelegate.h */,
 				2FF43F0C2145AFB9004718C6 /* AppDelegate.m */,
 				2FF43F112145AFB9004718C6 /* Main.storyboard */,
@@ -311,13 +342,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F1C786C216D8663007067E4 /* CapsulesListPresenter.m in Sources */,
 				2F336C73216AA3690059EC3E /* AddCoffeePresenter.m in Sources */,
 				2FF43F1B2145AFBA004718C6 /* main.m in Sources */,
+				2F1C786F216D8675007067E4 /* AddCapsulePresenter.m in Sources */,
+				2F1C7864216D8592007067E4 /* CapsulesListViewController.m in Sources */,
 				2F8EF771214ED9730069FDDC /* MainScreenCollectionViewCell.m in Sources */,
 				2FF43F0D2145AFB9004718C6 /* AppDelegate.m in Sources */,
+				2F1C7868216D8604007067E4 /* AddCapsuleViewController.m in Sources */,
 				2F53441421582E3800BF0D77 /* MainScreenViewPresenter.m in Sources */,
 				2F8EF776214EE4D30069FDDC /* MainScreenCollectionViewController.m in Sources */,
-				2F53441721582E4F00BF0D77 /* MainScreenViewModel.m in Sources */,
 				2F6CE9732164510A009793D7 /* AddCoffeeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
