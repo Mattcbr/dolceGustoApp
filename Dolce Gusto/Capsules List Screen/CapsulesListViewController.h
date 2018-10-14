@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CapsuleModel.h"
+#import "SaveRecipeDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CapsulesListViewController : UIViewController
+@interface CapsulesListViewController : UIViewController <UITextViewDelegate>
+
+@property (nonatomic, weak) id<SaveRecipeDelegate> delegate;
+@property NSMutableArray <CapsuleModel *> *capsulesList;
+-(void)updateCapsulesArray:(NSMutableArray *)array;
+@property NSString *screenType;
 
 @end
 

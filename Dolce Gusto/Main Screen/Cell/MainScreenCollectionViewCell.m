@@ -16,8 +16,11 @@
 
 @end
 
+
 @implementation MainScreenCollectionViewCell
 
-
+-(void)setCellForRecipe:(RecipeModel *)recipe{
+    self.coffeeNameLabel.text = recipe.recipeName;
+}
 
 @end

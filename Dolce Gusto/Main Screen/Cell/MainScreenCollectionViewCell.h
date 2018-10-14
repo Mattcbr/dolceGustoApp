@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RecipeModel.h"
 
 @interface MainScreenCollectionViewCell : UICollectionViewCell
+
+-(void)setCellForRecipe:(RecipeModel *)recipe;
 
 @end

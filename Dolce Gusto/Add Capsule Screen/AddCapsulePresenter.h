@@ -7,10 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AddCapsuleViewController.h"
+#import "AddCapsuleDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AddCapsulePresenter : NSObject
+
+@property (nonatomic, weak) id<AddCapsuleDelegate> delegate;
+
+- (instancetype)initWithController: (AddCapsuleViewController *)controller;
+- (void)didPressSaveWithName:(NSString *)name andQuantity:(int *)quantity;
 
 @end
 

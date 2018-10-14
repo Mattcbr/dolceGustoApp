@@ -110,72 +110,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Z10-wI-gKa" kind="push" identifier="showAddScreenSegue" id="yE3-xh-NWY"/>
+                        <outlet property="noCoffeeLabel" destination="Kat-2j-Ebl" id="gTA-75-s4x"/>
+                        <segue destination="LPC-ak-nBt" kind="push" identifier="showAddScreenSegue" id="LO3-wV-xeW"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tro-wY-fye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="425" y="9"/>
-        </scene>
-        <!--Coffee-->
-        <scene sceneID="zXA-t1-WDl">
-            <objects>
-                <viewController storyboardIdentifier="addNewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z10-wI-gKa" customClass="AddCoffeeViewController" sceneMemberID="viewController">
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="dve-TT-baW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nescafe_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZTL-V5-ddh">
-                                <rect key="frame" x="87.5" y="10" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="PqD-Vg-cwy"/>
-                                    <constraint firstAttribute="width" constant="200" id="emo-oj-V1T"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HBm-e4-Veq">
-                                <rect key="frame" x="37.5" y="200" width="300" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="1U6-7q-leV"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <constraints>
-                            <constraint firstItem="HBm-e4-Veq" firstAttribute="width" secondItem="dve-TT-baW" secondAttribute="width" multiplier="0.8" id="8GL-Si-ShD"/>
-                            <constraint firstItem="ZTL-V5-ddh" firstAttribute="bottom" secondItem="HBm-e4-Veq" secondAttribute="top" constant="10" id="Fxo-uL-oyG"/>
-                            <constraint firstAttribute="trailing" secondItem="ZTL-V5-ddh" secondAttribute="trailing" constant="68" id="JCV-Zb-FGT"/>
-                            <constraint firstItem="ZTL-V5-ddh" firstAttribute="centerX" secondItem="5rk-MH-wOg" secondAttribute="centerX" id="MdX-vf-B3Y"/>
-                            <constraint firstItem="HBm-e4-Veq" firstAttribute="centerX" secondItem="5rk-MH-wOg" secondAttribute="centerX" id="MmU-Jf-jz3"/>
-                            <constraint firstItem="ZTL-V5-ddh" firstAttribute="top" secondItem="5rk-MH-wOg" secondAttribute="top" constant="10" id="Oc2-OI-9di"/>
-                            <constraint firstItem="ZTL-V5-ddh" firstAttribute="centerX" secondItem="dve-TT-baW" secondAttribute="centerX" id="RBW-r3-UOa"/>
-                            <constraint firstItem="ZTL-V5-ddh" firstAttribute="top" secondItem="dve-TT-baW" secondAttribute="top" constant="10" id="nG6-kM-WCA"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="5rk-MH-wOg"/>
-                    </scrollView>
-                    <navigationItem key="navigationItem" title="Coffee" id="1th-Ch-yHJ">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="CZy-dq-Oe0">
-                            <connections>
-                                <action selector="dismissScreen" destination="Z10-wI-gKa" id="y6a-6f-gCt"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="zM7-Q0-2Yl">
-                            <connections>
-                                <action selector="didPressNext" destination="Z10-wI-gKa" id="yc0-oz-ReZ"/>
-                                <segue destination="LPC-ak-nBt" kind="show" id="2ji-Ex-cEt"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="coffeeNameField" destination="HBm-e4-Veq" id="HzC-hw-boh"/>
-                        <outlet property="testImageView" destination="ZTL-V5-ddh" id="gKy-rf-N9R"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PZn-Jp-O6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1222" y="-736"/>
         </scene>
         <!--Capsules-->
         <scene sceneID="z6J-gI-7ag">
@@ -185,41 +126,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nescafe_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZTL-V5-ddh">
+                                <rect key="frame" x="87.5" y="69" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="PqD-Vg-cwy"/>
+                                    <constraint firstAttribute="width" constant="200" id="emo-oj-V1T"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HBm-e4-Veq">
+                                <rect key="frame" x="37.5" y="279" width="300" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iZE-Hu-NPD">
+                                <rect key="frame" x="10" y="319" width="355" height="318"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capsules List:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jCn-EV-blH">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CapsuleCell" id="1M4-yl-az0" customClass="CapsulesListTableViewCell">
+                                        <rect key="frame" x="0.0" y="72" width="355" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1M4-yl-az0" id="VUN-4e-L5M">
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t15-lH-hiC">
+                                                    <rect key="frame" x="156.5" y="11.5" width="42" height="21"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstItem="t15-lH-hiC" firstAttribute="centerX" secondItem="1M4-yl-az0" secondAttribute="centerX" id="PsP-DJ-EIk"/>
+                                            <constraint firstItem="t15-lH-hiC" firstAttribute="centerY" secondItem="1M4-yl-az0" secondAttribute="centerY" id="yJj-Wo-LjJ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="capsuleNameLabel" destination="t15-lH-hiC" id="li6-zu-VNT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arK-J6-QIh">
                                 <rect key="frame" x="0.0" y="637" width="375" height="30"/>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HJP-nH-WMv" kind="show" id="2Uv-sv-OaP"/>
+                                    <segue destination="HJP-nH-WMv" kind="show" identifier="showAddNewCapsule" id="2Uv-sv-OaP"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iZE-Hu-NPD">
-                                <rect key="frame" x="10" y="74" width="355" height="563"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No capsule added yet. Please, click the &quot;Add&quot; button to add a capsule." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ts-hV-jXM">
+                                <rect key="frame" x="37.5" y="457.5" width="300" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="xjA-Mc-Yvk" firstAttribute="bottom" secondItem="arK-J6-QIh" secondAttribute="bottom" id="3wp-Hq-oOs"/>
-                            <constraint firstItem="iZE-Hu-NPD" firstAttribute="top" secondItem="xjA-Mc-Yvk" secondAttribute="top" constant="10" id="Imw-iT-QPW"/>
+                            <constraint firstItem="HBm-e4-Veq" firstAttribute="centerX" secondItem="iZE-Hu-NPD" secondAttribute="centerX" id="5qJ-yT-WSK"/>
+                            <constraint firstItem="6Ts-hV-jXM" firstAttribute="width" secondItem="xjA-Mc-Yvk" secondAttribute="width" multiplier="0.8" id="77h-6O-37d"/>
+                            <constraint firstItem="ZTL-V5-ddh" firstAttribute="top" secondItem="xjA-Mc-Yvk" secondAttribute="top" constant="5" id="MWz-f8-TYA"/>
                             <constraint firstItem="xjA-Mc-Yvk" firstAttribute="bottom" secondItem="iZE-Hu-NPD" secondAttribute="bottom" constant="30" id="ON9-u3-EWG"/>
+                            <constraint firstItem="ZTL-V5-ddh" firstAttribute="centerX" secondItem="vrI-7D-vKG" secondAttribute="centerX" id="RBm-jc-w6x"/>
                             <constraint firstItem="arK-J6-QIh" firstAttribute="width" secondItem="vrI-7D-vKG" secondAttribute="width" id="RGE-JM-QcP"/>
+                            <constraint firstItem="6Ts-hV-jXM" firstAttribute="centerY" secondItem="iZE-Hu-NPD" secondAttribute="centerY" id="Tti-jD-bCh"/>
+                            <constraint firstItem="HBm-e4-Veq" firstAttribute="top" secondItem="ZTL-V5-ddh" secondAttribute="bottom" constant="10" id="hAC-WT-ZQs"/>
                             <constraint firstItem="iZE-Hu-NPD" firstAttribute="centerX" secondItem="xjA-Mc-Yvk" secondAttribute="centerX" id="ib7-mF-9kB"/>
+                            <constraint firstItem="HBm-e4-Veq" firstAttribute="width" secondItem="vrI-7D-vKG" secondAttribute="width" multiplier="0.8" id="lHG-9Y-SOd"/>
+                            <constraint firstItem="6Ts-hV-jXM" firstAttribute="centerX" secondItem="xjA-Mc-Yvk" secondAttribute="centerX" id="lmG-v7-aIW"/>
+                            <constraint firstItem="iZE-Hu-NPD" firstAttribute="top" secondItem="HBm-e4-Veq" secondAttribute="bottom" constant="10" id="nIr-CX-Lqj"/>
                             <constraint firstItem="arK-J6-QIh" firstAttribute="centerX" secondItem="xjA-Mc-Yvk" secondAttribute="centerX" id="sBz-qw-fvH"/>
                             <constraint firstItem="iZE-Hu-NPD" firstAttribute="leading" secondItem="xjA-Mc-Yvk" secondAttribute="leading" constant="10" id="uDs-g0-3zO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xjA-Mc-Yvk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Capsules" id="oVG-hQ-b7R">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="0cr-Nz-pRa"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="0cr-Nz-pRa">
+                            <connections>
+                                <action selector="didPressSave" destination="LPC-ak-nBt" id="bIZ-ML-4to"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="capsulesListTableView" destination="iZE-Hu-NPD" id="laq-0m-tdd"/>
+                        <outlet property="coffeeNameField" destination="HBm-e4-Veq" id="L0e-Ce-9jp"/>
+                        <outlet property="noCapsuleLabel" destination="6Ts-hV-jXM" id="Vey-gn-poc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vye-Tn-bZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1996" y="-740.7796101949026"/>
+            <point key="canvasLocation" x="1228" y="-734"/>
         </scene>
         <!--New Capsule-->
         <scene sceneID="viJ-5k-Je8">
@@ -263,7 +274,11 @@
                         <viewLayoutGuide key="safeArea" id="YC5-Cj-VB5"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Capsule" id="6G1-bY-EWj">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="1HB-n2-xhN"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="1HB-n2-xhN">
+                            <connections>
+                                <action selector="didPressSave" destination="HJP-nH-WMv" id="bzJ-cz-IAo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="capsuleNameTextField" destination="Wh9-rc-oZM" id="DMV-Te-hyS"/>
@@ -273,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiT-5V-aqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2681" y="-740"/>
+            <point key="canvasLocation" x="1913" y="-734"/>
         </scene>
     </scenes>
     <resources>

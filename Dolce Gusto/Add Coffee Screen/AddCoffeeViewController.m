@@ -8,12 +8,12 @@
 
 #import "AddCoffeeViewController.h"
 #import "AddCoffeePresenter.h"
+#import "CapsulesListViewController.h"
 
 @interface AddCoffeeViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *coffeeNameField;
 @property (weak, nonatomic) IBOutlet UIImageView *testImageView;
-@property (weak, nonatomic) IBOutlet UITextView *cofeeDescriptionTextView;
 @property (strong, nonatomic) AddCoffeePresenter *presenter;
 
 @end
@@ -27,20 +27,31 @@
 }
 
 - (IBAction)didPressNext {
-    
+    [self.presenter didPressNextWithName: self.coffeeNameField.text];
 }
 
 - (IBAction)dismissScreen {
     [self.navigationController popViewControllerAnimated:YES];
 }
-/*
+
+- (void) showNoNameAlert {
+    UIAlertController *noNameAlert = [UIAlertController alertControllerWithTitle:@"Name not found"
+                                                                         message:@"Your coffee should have a name"
+                                                                  preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:nil];
+    [noNameAlert addAction:defaultAction];
+    [self presentViewController:noNameAlert animated:YES completion:nil];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    CapsulesListViewController *capsulesListVC = segue.destinationViewController;
+    capsulesListVC.recipeName = self.coffeeNameField.text;
 }
-*/
+
 
 @end

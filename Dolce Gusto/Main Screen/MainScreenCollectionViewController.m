@@ -8,13 +8,13 @@
 
 #import "MainScreenCollectionViewController.h"
 #import "MainScreenViewPresenter.h"
-#import "AddCoffeeViewController.h"
+#import "CapsulesListViewController.h"
 
 @interface MainScreenCollectionViewController ()
 
 @property (strong, nonatomic) MainScreenViewPresenter *presenter;
-@property NSString *addAlertScreenType;
-@property NSString *addAlertCoffeeType;
+@property NSMutableArray *recipesArray;
+@property (weak, nonatomic) IBOutlet UILabel *noCoffeeLabel;
 
 @end
 
@@ -25,6 +25,7 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.recipesArray = [[NSMutableArray alloc] init];
     self.presenter = [[MainScreenViewPresenter alloc] initWithViewController:self];
 }
 
@@ -42,9 +43,16 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
      if([segue.identifier isEqualToString:@"showAddScreenSegue"]) {
-         AddCoffeeViewController *destinationVC = segue.destinationViewController;
+         CapsulesListViewController *destinationVC = segue.destinationViewController;
+         destinationVC.delegate = self.presenter;
          destinationVC.screenType = @"Add";
      }
+}
+
+#pragma mark - Delegate Called Method
+-(void)reloadWithArray:(NSMutableArray *)recipesArray {
+    self.recipesArray = recipesArray;
+    [self.collectionView reloadData];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -54,11 +62,19 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 20;
+    if(self.recipesArray.count == 0){
+        self.noCoffeeLabel.hidden = NO;
+    } else {
+        self.noCoffeeLabel.hidden = YES;
+    }
+    return self.recipesArray.count;
 }
 
 - (MainScreenCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MainScreenCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    RecipeModel *Recipe = self.recipesArray[indexPath.row];
+    
+    [cell setCellForRecipe:Recipe];
     
     return cell;
 }

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "MainScreenCollectionViewController.h"
+#import "SaveRecipeDelegate.h"
 
-@interface MainScreenViewPresenter : NSObject
+@interface MainScreenViewPresenter : NSObject <SaveRecipeDelegate>
 
 -(instancetype)initWithViewController: (MainScreenCollectionViewController *)viewController;
 @property (weak,nonatomic) MainScreenCollectionViewController *controller;

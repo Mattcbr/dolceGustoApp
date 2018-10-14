@@ -7,34 +7,69 @@
 //
 
 #import "AddCapsuleViewController.h"
+#import "AddCapsulePresenter.h"
 
 @interface AddCapsuleViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *capsuleNameTextField;
 @property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
 @property (weak, nonatomic) IBOutlet UIStepper *quantityStepper;
-
+@property (strong, nonatomic) AddCapsulePresenter *presenter;
+@property NSInteger quantity;
 @end
 
 @implementation AddCapsuleViewController
 
+@dynamic delegate;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.quantityLabel.text = @"Quantidade de traços: 1";
+    [_capsuleNameTextField setDelegate:self];
+    self.quantity = 1;
+    self.quantityLabel.text = [NSString stringWithFormat: @"Quantidade de traços: %d", self.quantity];
 }
 - (IBAction)stepperValueChanged:(UIStepper *)sender {
     double value = [sender value];
-    self.quantityLabel.text = [NSString stringWithFormat:@"Quantidade de traços: %d", (int)value];
+    self.quantity = (int) value;
+    self.quantityLabel.text = [NSString stringWithFormat:@"Quantidade de traços: %d", self.quantity];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)didPressSave {
+    [self.presenter didPressSaveWithName: self.capsuleNameTextField.text andQuantity: self.quantity];
 }
-*/
+
+- (void)showNoNameAlert {
+    UIAlertController *noNameAlert = [UIAlertController alertControllerWithTitle:@"Name not found"
+                                                                         message:@"Your capsule should have a name"
+                                                                  preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:nil];
+    [noNameAlert addAction:defaultAction];
+    [self presentViewController:noNameAlert animated:YES completion:nil];
+}
+
+#pragma mark - UITextFieldDelegate
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (AddCapsulePresenter *)presenter {
+    if (_presenter == nil) {
+        _presenter = [[AddCapsulePresenter alloc] initWithController:self];
+    }
+    return _presenter;
+}
+
+- (id<AddCapsuleDelegate>)delegate {
+    return self.presenter.delegate;
+}
+
+- (void)setDelegate:(id<AddCapsuleDelegate>)delegate {
+    self.presenter.delegate = delegate;
+}
 
 @end

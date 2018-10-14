@@ -28,12 +28,12 @@
     return self;
 }
 
-- (void)saveCapsuleWithName:(NSString *)name {
-//    [self.capsulesArray addObject:]
-}
-
-- (void)saveRecipe {
-    
+- (void)didPressNextWithName:(NSString *)name {
+    if ([name isEqualToString:@""]) {
+        [self.controller showNoNameAlert];
+    } else {
+        [self.controller performSegueWithIdentifier:@"showCapsulesListSegue" sender:self.controller];
+    }
 }
 
 @end

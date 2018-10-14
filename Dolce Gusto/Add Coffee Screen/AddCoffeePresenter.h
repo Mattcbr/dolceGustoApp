@@ -11,8 +11,7 @@
 
 @interface AddCoffeePresenter : NSObject
 
-- (void)saveCapsuleWithName:(NSString *)name;
-- (void)saveRecipe;
+- (void)didPressNextWithName:(NSString *)name;
 - (instancetype)initWithViewController:(AddCoffeeViewController *)viewController;
 
 @end

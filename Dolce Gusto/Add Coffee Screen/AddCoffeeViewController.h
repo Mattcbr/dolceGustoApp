@@ -12,5 +12,6 @@
 
 @property NSString *screenType;
 @property NSString *coffeeType;
+- (void) showNoNameAlert;
 
 @end
