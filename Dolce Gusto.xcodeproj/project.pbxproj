@@ -24,6 +24,9 @@
 		2FF43F1B2145AFBA004718C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF43F1A2145AFBA004718C6 /* main.m */; };
 		2FF43F252145AFBA004718C6 /* Dolce_GustoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF43F242145AFBA004718C6 /* Dolce_GustoTests.m */; };
 		2FF43F302145AFBA004718C6 /* Dolce_GustoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF43F2F2145AFBA004718C6 /* Dolce_GustoUITests.m */; };
+		C4637230B1F91E30111DED8D /* libPods-Dolce GustoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A94E1986354E190E596FB74 /* libPods-Dolce GustoTests.a */; };
+		D90BACCB4183711ED5716245 /* libPods-Dolce Gusto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F69568A99DB59D574351AD /* libPods-Dolce Gusto.a */; };
+		ED85F7156CA6AA0A0C4FC1EC /* libPods-Dolce GustoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B95FE24B699DB17708A7A1 /* libPods-Dolce GustoUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06DED18997FA3325551D6448 /* Pods-Dolce GustoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dolce GustoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dolce GustoUITests/Pods-Dolce GustoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1A94E1986354E190E596FB74 /* libPods-Dolce GustoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dolce GustoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21FE9552D444FB82B8090043 /* Pods-Dolce GustoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dolce GustoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dolce GustoTests/Pods-Dolce GustoTests.release.xcconfig"; sourceTree = "<group>"; };
 		2F1C7862216D8592007067E4 /* CapsulesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CapsulesListViewController.h; sourceTree = "<group>"; };
 		2F1C7863216D8592007067E4 /* CapsulesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapsulesListViewController.m; sourceTree = "<group>"; };
 		2F1C7866216D8604007067E4 /* AddCapsuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AddCapsuleViewController.h; path = "Dolce Gusto/Add Capsule Screen/AddCapsuleViewController.h"; sourceTree = SOURCE_ROOT; };
@@ -80,6 +86,12 @@
 		2FF43F2B2145AFBA004718C6 /* Dolce GustoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dolce GustoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF43F2F2145AFBA004718C6 /* Dolce_GustoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dolce_GustoUITests.m; sourceTree = "<group>"; };
 		2FF43F312145AFBA004718C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3096F6EC7E7FA406D3ECC7AC /* Pods-Dolce Gusto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dolce Gusto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dolce Gusto/Pods-Dolce Gusto.debug.xcconfig"; sourceTree = "<group>"; };
+		37B95FE24B699DB17708A7A1 /* libPods-Dolce GustoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dolce GustoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49AFE47D4B0657E65BA702BE /* Pods-Dolce Gusto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dolce Gusto.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dolce Gusto/Pods-Dolce Gusto.release.xcconfig"; sourceTree = "<group>"; };
+		60F69568A99DB59D574351AD /* libPods-Dolce Gusto.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dolce Gusto.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63D5CDC7BC39349CF4ADDF61 /* Pods-Dolce GustoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dolce GustoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dolce GustoTests/Pods-Dolce GustoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B22F27F6D5553F60CA4CAA96 /* Pods-Dolce GustoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dolce GustoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dolce GustoUITests/Pods-Dolce GustoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D90BACCB4183711ED5716245 /* libPods-Dolce Gusto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4637230B1F91E30111DED8D /* libPods-Dolce GustoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED85F7156CA6AA0A0C4FC1EC /* libPods-Dolce GustoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +196,8 @@
 				2FF43F232145AFBA004718C6 /* Dolce GustoTests */,
 				2FF43F2E2145AFBA004718C6 /* Dolce GustoUITests */,
 				2FF43F092145AFB8004718C6 /* Products */,
+				767FE8846571BF17B6D9C944 /* Pods */,
+				30BA4B0CDA20098FB6D84482 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,6 +247,29 @@
 			path = "Dolce GustoUITests";
 			sourceTree = "<group>";
 		};
+		30BA4B0CDA20098FB6D84482 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60F69568A99DB59D574351AD /* libPods-Dolce Gusto.a */,
+				1A94E1986354E190E596FB74 /* libPods-Dolce GustoTests.a */,
+				37B95FE24B699DB17708A7A1 /* libPods-Dolce GustoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		767FE8846571BF17B6D9C944 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3096F6EC7E7FA406D3ECC7AC /* Pods-Dolce Gusto.debug.xcconfig */,
+				49AFE47D4B0657E65BA702BE /* Pods-Dolce Gusto.release.xcconfig */,
+				63D5CDC7BC39349CF4ADDF61 /* Pods-Dolce GustoTests.debug.xcconfig */,
+				21FE9552D444FB82B8090043 /* Pods-Dolce GustoTests.release.xcconfig */,
+				B22F27F6D5553F60CA4CAA96 /* Pods-Dolce GustoUITests.debug.xcconfig */,
+				06DED18997FA3325551D6448 /* Pods-Dolce GustoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,6 +277,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FF43F342145AFBA004718C6 /* Build configuration list for PBXNativeTarget "Dolce Gusto" */;
 			buildPhases = (
+				CCFB0A14B7AB910EE1ADCCEA /* [CP] Check Pods Manifest.lock */,
 				2FF43F042145AFB8004718C6 /* Sources */,
 				2FF43F052145AFB8004718C6 /* Frameworks */,
 				2FF43F062145AFB8004718C6 /* Resources */,
@@ -254,6 +295,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FF43F372145AFBA004718C6 /* Build configuration list for PBXNativeTarget "Dolce GustoTests" */;
 			buildPhases = (
+				BDE9CDDB5E83935B94938E78 /* [CP] Check Pods Manifest.lock */,
 				2FF43F1C2145AFBA004718C6 /* Sources */,
 				2FF43F1D2145AFBA004718C6 /* Frameworks */,
 				2FF43F1E2145AFBA004718C6 /* Resources */,
@@ -272,6 +314,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FF43F3A2145AFBA004718C6 /* Build configuration list for PBXNativeTarget "Dolce GustoUITests" */;
 			buildPhases = (
+				0A1140B1DB8341F193783569 /* [CP] Check Pods Manifest.lock */,
 				2FF43F272145AFBA004718C6 /* Sources */,
 				2FF43F282145AFBA004718C6 /* Frameworks */,
 				2FF43F292145AFBA004718C6 /* Resources */,
@@ -354,6 +397,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A1140B1DB8341F193783569 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dolce GustoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDE9CDDB5E83935B94938E78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dolce GustoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCFB0A14B7AB910EE1ADCCEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dolce Gusto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2FF43F042145AFB8004718C6 /* Sources */ = {
@@ -538,6 +650,7 @@
 		};
 		2FF43F352145AFBA004718C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3096F6EC7E7FA406D3ECC7AC /* Pods-Dolce Gusto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -555,6 +668,7 @@
 		};
 		2FF43F362145AFBA004718C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49AFE47D4B0657E65BA702BE /* Pods-Dolce Gusto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -572,6 +686,7 @@
 		};
 		2FF43F382145AFBA004718C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63D5CDC7BC39349CF4ADDF61 /* Pods-Dolce GustoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -591,6 +706,7 @@
 		};
 		2FF43F392145AFBA004718C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21FE9552D444FB82B8090043 /* Pods-Dolce GustoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -610,6 +726,7 @@
 		};
 		2FF43F3B2145AFBA004718C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B22F27F6D5553F60CA4CAA96 /* Pods-Dolce GustoUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DAQ759ZX7;
@@ -628,6 +745,7 @@
 		};
 		2FF43F3C2145AFBA004718C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06DED18997FA3325551D6448 /* Pods-Dolce GustoUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DAQ759ZX7;
