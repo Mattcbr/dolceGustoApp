@@ -11,6 +11,7 @@
 
 @interface MainScreenCollectionViewController : UICollectionViewController
 
--(void)reloadWithArray:(NSMutableArray *)recipesArray;
+-(void)reloadRecipes;
+-(void)showAddScreen;
 
 @end

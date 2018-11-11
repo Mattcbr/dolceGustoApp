@@ -13,7 +13,7 @@
 #import "CapsulesListTableViewCell.h"
 #import "RecipeModel.h"
 
-@interface CapsulesListViewController () <UITableViewDataSource>
+@interface CapsulesListViewController () <UITableViewDataSource, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *coffeeNameField;
 @property (weak, nonatomic) IBOutlet UITableView *capsulesListTableView;
@@ -29,43 +29,28 @@
     [super viewDidLoad];
 
     self.presenter = [[CapsulesListPresenter alloc]initWithViewController:self];
-    self.capsulesArray = [[NSMutableArray alloc] init];
+    self.capsulesArray = [[NSMutableArray alloc] init]; //Tentar remover
     
     self.navigationItem.title = [NSString stringWithFormat:@"%@ recipe", self.screenType];
     
     self.coffeeNameField.delegate = self;
+    self.capsulesListTableView.dataSource = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    if(self.capsulesArray.count == 0){
-        self.noCapsuleLabel.hidden = NO;
-    } else {
-        self.noCapsuleLabel.hidden = YES;
-    }
+    self.noCapsuleLabel.hidden = (self.capsulesArray.count > 0);
 }
 
 #pragma mark - Save Handling
 
 -(IBAction)didPressSave {
-    if ([self.coffeeNameField.text isEqualToString:@""]){
-        [self displayErrorWithType:@"missingName"];
-    } else if (self.capsulesArray.count < 1){
-        [self displayErrorWithType:@"missingCapsules"];
-    } else {
-        RecipeModel *newRecipe = [[RecipeModel alloc] initWithName:self.coffeeNameField.text
-                                                   andCapsules:self.capsulesArray];
-    
-        [self.delegate addNewRecipe:newRecipe];
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    }
+    [self.presenter didPressSaveWithCoffeeName:self.coffeeNameField.text andCapsules:self.capsulesArray];
 }
 
 #pragma mark - Data update
 
 -(void)updateCapsulesArray:(NSMutableArray *)array {
     self.capsulesArray = array;
-    self.capsulesListTableView.dataSource = self;
-    self.capsulesListTableView.hidden = NO;
     [self.capsulesListTableView reloadData];
 }
 
@@ -86,7 +71,7 @@
 
 #pragma mark - Error Handling
 
-- (void)displayErrorWithType:(NSString *)type {
+-(void)displayErrorWithType:(NSString *)type {
     UIAlertController *alert;
     if ([type isEqualToString:@"missingName"]){
         alert = [UIAlertController alertControllerWithTitle:@"Missing Name"
@@ -106,8 +91,6 @@
 }
 
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showAddNewCapsule"]) {
         AddCapsuleViewController *addCapsuleVC = segue.destinationViewController;
@@ -117,7 +100,6 @@
 }
 
 #pragma mark - UITextFieldDelegate
-
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
     
     [textField resignFirstResponder];

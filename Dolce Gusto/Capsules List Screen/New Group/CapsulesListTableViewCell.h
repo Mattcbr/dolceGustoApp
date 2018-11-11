@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CapsulesListTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *capsuleNameLabel;
 -(void)setupCellForCapsule:(CapsuleModel *)capsule;
 
 @end

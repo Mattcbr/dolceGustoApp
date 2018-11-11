@@ -26,12 +26,12 @@
     
     [_capsuleNameTextField setDelegate:self];
     self.quantity = 1;
-    self.quantityLabel.text = [NSString stringWithFormat: @"Quantidade de traços: %d", self.quantity];
+    self.quantityLabel.text = [NSString stringWithFormat: @"Quantidade de traços: %ld", (long)self.quantity];
 }
 - (IBAction)stepperValueChanged:(UIStepper *)sender {
     double value = [sender value];
     self.quantity = (int) value;
-    self.quantityLabel.text = [NSString stringWithFormat:@"Quantidade de traços: %d", self.quantity];
+    self.quantityLabel.text = [NSString stringWithFormat:@"Quantidade de traços: %ld", (long)self.quantity];
 }
 
 - (IBAction)didPressSave {

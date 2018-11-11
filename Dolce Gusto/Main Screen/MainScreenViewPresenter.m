@@ -8,12 +8,6 @@
 
 #import "MainScreenViewPresenter.h"
 
-@interface MainScreenViewPresenter ()
-
-@property NSMutableArray <RecipeModel *> *recipesArray;
-
-@end
-
 @implementation MainScreenViewPresenter
 
 - (instancetype)initWithViewController:(MainScreenCollectionViewController *)viewController
@@ -26,12 +20,18 @@
     return self;
 }
 
+- (id<SaveRecipeDelegate>)createSaveRecipeDelegate {
+    return self;
+}
+
 #pragma mark SaveRecipeDelegate
 
 - (void)addNewRecipe:(RecipeModel *)recipe {
     [self.recipesArray addObject:recipe];
-    [self.controller reloadWithArray:self.recipesArray];
-    NSLog(@"Hello, Matt :D");
+    [self.controller reloadRecipes];
 }
 
+-(void)didPressAdd {
+    [self.controller showAddScreen];
+}
 @end

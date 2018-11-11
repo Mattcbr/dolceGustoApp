@@ -13,7 +13,6 @@
 @interface MainScreenCollectionViewController ()
 
 @property (strong, nonatomic) MainScreenViewPresenter *presenter;
-@property NSMutableArray *recipesArray;
 @property (weak, nonatomic) IBOutlet UILabel *noCoffeeLabel;
 
 @end
@@ -25,33 +24,29 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.recipesArray = [[NSMutableArray alloc] init];
     self.presenter = [[MainScreenViewPresenter alloc] initWithViewController:self];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 #pragma mark - Add Button Handler
 -(IBAction)didPressAdd {
-    [self performSegueWithIdentifier:@"showAddScreenSegue" sender:self];
+    [self.presenter didPressAdd];
 }
 
 #pragma mark - Navigation
+-(void)showAddScreen {
+    [self performSegueWithIdentifier:@"showAddScreenSegue" sender:self];
+}
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-     if([segue.identifier isEqualToString:@"showAddScreenSegue"]) {
+     if ([segue.identifier isEqualToString:@"showAddScreenSegue"]) {
          CapsulesListViewController *destinationVC = segue.destinationViewController;
-         destinationVC.delegate = self.presenter;
+         destinationVC.delegate = [self.presenter createSaveRecipeDelegate];
          destinationVC.screenType = @"Add";
      }
 }
 
 #pragma mark - Delegate Called Method
--(void)reloadWithArray:(NSMutableArray *)recipesArray {
-    self.recipesArray = recipesArray;
+-(void)reloadRecipes {
     [self.collectionView reloadData];
 }
 
@@ -62,19 +57,16 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if(self.recipesArray.count == 0){
-        self.noCoffeeLabel.hidden = NO;
-    } else {
-        self.noCoffeeLabel.hidden = YES;
-    }
-    return self.recipesArray.count;
+    self.noCoffeeLabel.hidden = (self.presenter.recipesArray.count > 0);
+    
+    return self.presenter.recipesArray.count;
 }
 
 - (MainScreenCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MainScreenCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    RecipeModel *Recipe = self.recipesArray[indexPath.row];
+    RecipeModel *recipe = self.presenter.recipesArray[indexPath.row];
     
-    [cell setCellForRecipe:Recipe];
+    [cell setCellForRecipe:recipe];
     
     return cell;
 }

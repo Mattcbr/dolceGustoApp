@@ -12,7 +12,11 @@
 
 @interface MainScreenViewPresenter : NSObject <SaveRecipeDelegate>
 
--(instancetype)initWithViewController: (MainScreenCollectionViewController *)viewController;
 @property (weak,nonatomic) MainScreenCollectionViewController *controller;
+
+-(instancetype)initWithViewController: (MainScreenCollectionViewController *)viewController;
+-(id<SaveRecipeDelegate>)createSaveRecipeDelegate;
+@property NSMutableArray <RecipeModel *> *recipesArray;
+-(void) didPressAdd;
 
 @end

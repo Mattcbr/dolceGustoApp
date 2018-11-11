@@ -24,7 +24,8 @@
 }
 
 - (void)didPressSaveWithName:(NSString *)name andQuantity:(int *)quantity {
-    if ([name isEqualToString:@""]){
+    NSString *nameToValidate = [name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if ([nameToValidate isEqualToString:@""]){
         [self.controller showNoNameAlert];
     } else {
         CapsuleModel *newCapsule = [[CapsuleModel alloc] initWithName:name andQuantity:quantity];
