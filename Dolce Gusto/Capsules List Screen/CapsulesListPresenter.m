@@ -7,11 +7,13 @@
 //
 
 #import "CapsulesListPresenter.h"
+#import "DatabaseManager.h"
 
 @interface CapsulesListPresenter ()
 
 @property NSMutableArray <CapsuleModel *> *capsulesArray;
 @property CapsulesListViewController *controller;
+@property DatabaseManager *dbManager;
 
 @end
 
@@ -22,6 +24,7 @@
     if (self) {
         self.controller = capsulesListController;
         self.capsulesArray = [[NSMutableArray alloc] init];
+        self.dbManager = [DatabaseManager sharedManager];
     }
     return self;
 }
@@ -33,9 +36,13 @@
     } else if (capsulesArray.count == 0){
         [self.controller displayErrorWithType:@"missingCapsules"];
     } else {
+        NSInteger latestRecipeId = [self.dbManager getLatestRecipeId];
         RecipeModel *newRecipe = [[RecipeModel alloc] initWithName:coffeeName
-                                                       andCapsules:self.capsulesArray];
+                                                          Capsules:self.capsulesArray
+                                                             andID:(latestRecipeId + 1)];
         
+        [self.dbManager insertNewRecipe:newRecipe];
+        [self.dbManager insertNewCapsules:capsulesArray ForRecipeID:(latestRecipeId + 1)];
         [self.controller.delegate addNewRecipe:newRecipe];
         [self.controller.navigationController popToRootViewControllerAnimated:YES];
     }

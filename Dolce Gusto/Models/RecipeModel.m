@@ -10,11 +10,23 @@
 
 @implementation RecipeModel
 
-- (instancetype)initWithName:(NSString *)name andCapsules:(NSMutableArray <CapsuleModel *> *)capsules {
+- (instancetype)initWithName:(NSString *)name Capsules:(NSMutableArray <CapsuleModel *> *)capsules andID:(NSInteger *)newRecipeId {
     self = [super init];
     if (self) {
         _recipeName = name;
         _capsulesArray = capsules;
+        _recipeId = newRecipeId;
+    }
+    return self;
+}
+
+- (instancetype)initWithName:(NSString *)name andId:(int *)recipeId
+{
+    self = [super init];
+    if (self) {
+        _recipeName = name;
+        _capsulesArray = [[NSMutableArray alloc] init];
+        _recipeId = recipeId;
     }
     return self;
 }

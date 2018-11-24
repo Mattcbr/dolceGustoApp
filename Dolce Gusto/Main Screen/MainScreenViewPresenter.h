@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "MainScreenCollectionViewController.h"
 #import "SaveRecipeDelegate.h"
+#import "DatabaseManager.h"
 
 @interface MainScreenViewPresenter : NSObject <SaveRecipeDelegate>
 
 @property (weak,nonatomic) MainScreenCollectionViewController *controller;
+@property NSMutableArray <RecipeModel *> *recipesArray;
 
 -(instancetype)initWithViewController: (MainScreenCollectionViewController *)viewController;
 -(id<SaveRecipeDelegate>)createSaveRecipeDelegate;
-@property NSMutableArray <RecipeModel *> *recipesArray;
 -(void) didPressAdd;
 
 @end

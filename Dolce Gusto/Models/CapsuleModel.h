@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CapsuleModel : NSObject
 
+@property int *capsuleId;
 @property NSString *capsuleName;
 @property NSInteger *capsuleQuantity;
 - (instancetype)initWithName:(NSString *)name andQuantity:(NSInteger *)quantity;

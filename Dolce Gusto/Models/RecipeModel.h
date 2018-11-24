@@ -13,10 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RecipeModel : NSObject
 
+@property NSInteger *recipeId;
 @property NSString *recipeName;
 @property NSMutableArray <CapsuleModel *> *capsulesArray;
 
-- (instancetype)initWithName:(NSString *)name andCapsules:(NSMutableArray <CapsuleModel *> *)capsules;
+- (instancetype)initWithName:(NSString *)name Capsules:(NSMutableArray <CapsuleModel *> *)capsules andID:(NSInteger *)newRecipeId;
+- (instancetype)initWithName:(NSString *)name andId:(int *)recipeId;
 
 @end
 

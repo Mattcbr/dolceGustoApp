@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F009868219B95C800957D3F /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F009867219B95C800957D3F /* DatabaseManager.m */; };
 		2F1C7864216D8592007067E4 /* CapsulesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C7863216D8592007067E4 /* CapsulesListViewController.m */; };
 		2F1C7868216D8604007067E4 /* AddCapsuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C7867216D8604007067E4 /* AddCapsuleViewController.m */; };
 		2F1C786C216D8663007067E4 /* CapsulesListPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C786B216D8663007067E4 /* CapsulesListPresenter.m */; };
@@ -14,6 +15,8 @@
 		2F1C7873216D8A2D007067E4 /* RecipeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C7872216D8A2D007067E4 /* RecipeModel.m */; };
 		2F1C7876216D8A43007067E4 /* CapsuleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C7875216D8A43007067E4 /* CapsuleModel.m */; };
 		2F53441421582E3800BF0D77 /* MainScreenViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53441321582E3800BF0D77 /* MainScreenViewPresenter.m */; };
+		2F557D7421A4D1FF00FAFD81 /* DetailsScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F557D7321A4D1FF00FAFD81 /* DetailsScreenViewController.m */; };
+		2F557D7A21A4DAF900FAFD81 /* DetailsScreenPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F557D7921A4DAF900FAFD81 /* DetailsScreenPresenter.m */; };
 		2F8EF771214ED9730069FDDC /* MainScreenCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EF770214ED9730069FDDC /* MainScreenCollectionViewCell.m */; };
 		2F8EF776214EE4D30069FDDC /* MainScreenCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EF775214EE4D30069FDDC /* MainScreenCollectionViewController.m */; };
 		2FB2DD2C217271CF00B343B8 /* CapsulesListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2DD2B217271CF00B343B8 /* CapsulesListTableViewCell.m */; };
@@ -50,6 +53,8 @@
 		06DED18997FA3325551D6448 /* Pods-Dolce GustoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dolce GustoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dolce GustoUITests/Pods-Dolce GustoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1A94E1986354E190E596FB74 /* libPods-Dolce GustoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dolce GustoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21FE9552D444FB82B8090043 /* Pods-Dolce GustoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dolce GustoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dolce GustoTests/Pods-Dolce GustoTests.release.xcconfig"; sourceTree = "<group>"; };
+		2F009866219B95C800957D3F /* DatabaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		2F009867219B95C800957D3F /* DatabaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
 		2F1C7862216D8592007067E4 /* CapsulesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CapsulesListViewController.h; sourceTree = "<group>"; };
 		2F1C7863216D8592007067E4 /* CapsulesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapsulesListViewController.m; sourceTree = "<group>"; };
 		2F1C7866216D8604007067E4 /* AddCapsuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AddCapsuleViewController.h; path = "Dolce Gusto/Add Capsule Screen/AddCapsuleViewController.h"; sourceTree = SOURCE_ROOT; };
@@ -64,6 +69,10 @@
 		2F1C7875216D8A43007067E4 /* CapsuleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CapsuleModel.m; sourceTree = "<group>"; };
 		2F53441221582E3800BF0D77 /* MainScreenViewPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenViewPresenter.h; sourceTree = "<group>"; };
 		2F53441321582E3800BF0D77 /* MainScreenViewPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewPresenter.m; sourceTree = "<group>"; };
+		2F557D7221A4D1FF00FAFD81 /* DetailsScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsScreenViewController.h; sourceTree = "<group>"; };
+		2F557D7321A4D1FF00FAFD81 /* DetailsScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsScreenViewController.m; sourceTree = "<group>"; };
+		2F557D7821A4DAF900FAFD81 /* DetailsScreenPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsScreenPresenter.h; sourceTree = "<group>"; };
+		2F557D7921A4DAF900FAFD81 /* DetailsScreenPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsScreenPresenter.m; sourceTree = "<group>"; };
 		2F842A3B217278E400B54A23 /* SaveRecipeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveRecipeDelegate.h; sourceTree = "<group>"; };
 		2F8EF76F214ED9730069FDDC /* MainScreenCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenCollectionViewCell.h; sourceTree = "<group>"; };
 		2F8EF770214ED9730069FDDC /* MainScreenCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenCollectionViewCell.m; sourceTree = "<group>"; };
@@ -122,6 +131,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F009865219B958300957D3F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				2F009866219B95C800957D3F /* DatabaseManager.h */,
+				2F009867219B95C800957D3F /* DatabaseManager.m */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		2F1C7865216D859B007067E4 /* Capsules List Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +197,17 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		2F557D7121A4D1AE00FAFD81 /* Details Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2F557D7221A4D1FF00FAFD81 /* DetailsScreenViewController.h */,
+				2F557D7321A4D1FF00FAFD81 /* DetailsScreenViewController.m */,
+				2F557D7821A4DAF900FAFD81 /* DetailsScreenPresenter.h */,
+				2F557D7921A4DAF900FAFD81 /* DetailsScreenPresenter.m */,
+			);
+			path = "Details Screen";
+			sourceTree = "<group>";
+		};
 		2FB2DD2D2172720800B343B8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +247,8 @@
 				2F1C7865216D859B007067E4 /* Capsules List Screen */,
 				2F1C7869216D8613007067E4 /* Add Capsule Screen */,
 				2F1C7870216D8A09007067E4 /* Models */,
+				2F009865219B958300957D3F /* Database */,
+				2F557D7121A4D1AE00FAFD81 /* Details Screen */,
 				2FF43F0B2145AFB8004718C6 /* AppDelegate.h */,
 				2FF43F0C2145AFB9004718C6 /* AppDelegate.m */,
 				2FF43F112145AFB9004718C6 /* Main.storyboard */,
@@ -473,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F1C786C216D8663007067E4 /* CapsulesListPresenter.m in Sources */,
+				2F557D7421A4D1FF00FAFD81 /* DetailsScreenViewController.m in Sources */,
 				2F1C7873216D8A2D007067E4 /* RecipeModel.m in Sources */,
 				2FF43F1B2145AFBA004718C6 /* main.m in Sources */,
 				2F1C786F216D8675007067E4 /* AddCapsulePresenter.m in Sources */,
@@ -480,10 +512,12 @@
 				2F8EF771214ED9730069FDDC /* MainScreenCollectionViewCell.m in Sources */,
 				2FF43F0D2145AFB9004718C6 /* AppDelegate.m in Sources */,
 				2F1C7868216D8604007067E4 /* AddCapsuleViewController.m in Sources */,
+				2F557D7A21A4DAF900FAFD81 /* DetailsScreenPresenter.m in Sources */,
 				2F53441421582E3800BF0D77 /* MainScreenViewPresenter.m in Sources */,
 				2F8EF776214EE4D30069FDDC /* MainScreenCollectionViewController.m in Sources */,
 				2FB2DD2C217271CF00B343B8 /* CapsulesListTableViewCell.m in Sources */,
 				2F1C7876216D8A43007067E4 /* CapsuleModel.m in Sources */,
+				2F009868219B95C800957D3F /* DatabaseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
