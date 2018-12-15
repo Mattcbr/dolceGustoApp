@@ -10,7 +10,7 @@
 
 @implementation RecipeModel
 
-- (instancetype)initWithName:(NSString *)name Capsules:(NSMutableArray <CapsuleModel *> *)capsules andID:(NSInteger *)newRecipeId {
+- (instancetype)initWithName:(NSString *)name capsules:(NSArray<CapsuleModel *> *)capsules andId:(NSInteger)newRecipeId {
     self = [super init];
     if (self) {
         _recipeName = name;
@@ -20,13 +20,12 @@
     return self;
 }
 
-- (instancetype)initWithName:(NSString *)name andId:(int *)recipeId
-{
+- (instancetype)initWithName:(NSString *)name andId:(NSInteger)newRecipeId {
     self = [super init];
     if (self) {
         _recipeName = name;
         _capsulesArray = [[NSMutableArray alloc] init];
-        _recipeId = recipeId;
+        _recipeId = newRecipeId;
     }
     return self;
 }

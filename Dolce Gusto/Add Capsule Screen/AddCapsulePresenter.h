@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<AddCapsuleDelegate> delegate;
 
 - (instancetype)initWithController: (AddCapsuleViewController *)controller;
-- (void)didPressSaveWithName:(NSString *)name andQuantity:(int *)quantity;
+- (void)didPressSaveWithName:(NSString *)name andQuantity:(NSInteger)quantity isEditing:(BOOL)isEditing;
+- (void)deleteCapsule:(CapsuleModel *)capsule;
 
 @end
 

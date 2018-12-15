@@ -99,6 +99,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Dolce Gusto" id="L0C-Im-oQU">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Agy-Ar-sj9"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="3bp-P7-wSU">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bjX-Ha-w6B">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
@@ -119,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="425" y="9"/>
         </scene>
-        <!--Details Screen View Controller-->
+        <!--Title-->
         <scene sceneID="lWT-h3-yds">
             <objects>
                 <viewController id="wks-QO-Ahr" customClass="DetailsScreenViewController" sceneMemberID="viewController">
@@ -174,10 +175,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yi4-NX-fXm"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="hfR-9g-xai">
+                        <barButtonItem key="backBarButtonItem" title=" " id="fIz-bU-YB2"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Pmg-pc-SAv">
+                            <connections>
+                                <action selector="didPressEditButton:" destination="wks-QO-Ahr" id="X2t-W2-xhf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="coffeDetailLabel" destination="1YF-JF-gYd" id="b5a-Dr-Sbl"/>
                         <outlet property="coffeNameLabel" destination="2ps-NT-oEa" id="qsh-5N-GrQ"/>
                         <outlet property="loadingIndicator" destination="Fpo-Lm-AMa" id="u4e-ch-bTe"/>
+                        <segue destination="LPC-ak-nBt" kind="show" identifier="editRecipeSegue" id="lrk-X7-pXN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJZ-IT-azJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,21 +215,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iZE-Hu-NPD">
-                                <rect key="frame" x="10" y="319" width="355" height="318"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capsules List:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-EV-blH">
+                                <rect key="frame" x="134" y="314" width="107" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iZE-Hu-NPD">
+                                <rect key="frame" x="10" y="359.5" width="355" height="277.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capsules List:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jCn-EV-blH">
-                                    <rect key="frame" x="0.0" y="0.0" width="355" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CapsuleCell" id="1M4-yl-az0" customClass="CapsulesListTableViewCell">
-                                        <rect key="frame" x="0.0" y="72" width="355" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CapsuleCell" id="1M4-yl-az0" customClass="CapsulesListTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="355" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1M4-yl-az0" id="VUN-4e-L5M">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="43.5"/>
@@ -246,7 +255,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arK-J6-QIh">
-                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <rect key="frame" x="335" y="329.5" width="30" height="30"/>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -255,33 +264,48 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No capsule added yet. Please, click the &quot;Add&quot; button to add a capsule." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ts-hV-jXM">
-                                <rect key="frame" x="37.5" y="457.5" width="300" height="41"/>
+                                <rect key="frame" x="45.5" y="478" width="284" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r07-k5-GEA">
+                                <rect key="frame" x="140" y="647" width="95" height="20"/>
+                                <state key="normal" title="Delete Recipe">
+                                    <color key="titleColor" red="0.80739288470000004" green="0.082518904800000001" blue="0.027154939539999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressDeleteButton:" destination="LPC-ak-nBt" eventType="touchUpInside" id="X2a-d3-pdq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="xjA-Mc-Yvk" firstAttribute="bottom" secondItem="arK-J6-QIh" secondAttribute="bottom" id="3wp-Hq-oOs"/>
-                            <constraint firstItem="HBm-e4-Veq" firstAttribute="centerX" secondItem="iZE-Hu-NPD" secondAttribute="centerX" id="5qJ-yT-WSK"/>
-                            <constraint firstItem="6Ts-hV-jXM" firstAttribute="width" secondItem="xjA-Mc-Yvk" secondAttribute="width" multiplier="0.8" id="77h-6O-37d"/>
+                            <constraint firstItem="iZE-Hu-NPD" firstAttribute="top" secondItem="arK-J6-QIh" secondAttribute="bottom" id="3wp-Hq-oOs"/>
+                            <constraint firstItem="r07-k5-GEA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iZE-Hu-NPD" secondAttribute="bottom" constant="10" id="AdT-J7-MTQ"/>
+                            <constraint firstItem="xjA-Mc-Yvk" firstAttribute="bottom" secondItem="iZE-Hu-NPD" secondAttribute="bottom" constant="30" id="B2q-Ks-rEO"/>
+                            <constraint firstItem="jCn-EV-blH" firstAttribute="top" secondItem="HBm-e4-Veq" secondAttribute="bottom" constant="5" id="C0D-Fo-g9x"/>
+                            <constraint firstItem="jCn-EV-blH" firstAttribute="bottom" secondItem="arK-J6-QIh" secondAttribute="top" constant="5" id="DIe-BZ-ICL"/>
                             <constraint firstItem="ZTL-V5-ddh" firstAttribute="top" secondItem="xjA-Mc-Yvk" secondAttribute="top" constant="5" id="MWz-f8-TYA"/>
-                            <constraint firstItem="xjA-Mc-Yvk" firstAttribute="bottom" secondItem="iZE-Hu-NPD" secondAttribute="bottom" constant="30" id="ON9-u3-EWG"/>
+                            <constraint firstItem="6Ts-hV-jXM" firstAttribute="width" secondItem="iZE-Hu-NPD" secondAttribute="width" multiplier="0.8" id="PwJ-IT-Mwi"/>
                             <constraint firstItem="ZTL-V5-ddh" firstAttribute="centerX" secondItem="vrI-7D-vKG" secondAttribute="centerX" id="RBm-jc-w6x"/>
-                            <constraint firstItem="arK-J6-QIh" firstAttribute="width" secondItem="vrI-7D-vKG" secondAttribute="width" id="RGE-JM-QcP"/>
+                            <constraint firstItem="HBm-e4-Veq" firstAttribute="centerX" secondItem="xjA-Mc-Yvk" secondAttribute="centerX" id="RLq-37-kit"/>
                             <constraint firstItem="6Ts-hV-jXM" firstAttribute="centerY" secondItem="iZE-Hu-NPD" secondAttribute="centerY" id="Tti-jD-bCh"/>
+                            <constraint firstItem="jCn-EV-blH" firstAttribute="centerX" secondItem="xjA-Mc-Yvk" secondAttribute="centerX" id="UAo-f1-EzS"/>
+                            <constraint firstItem="r07-k5-GEA" firstAttribute="centerX" secondItem="xjA-Mc-Yvk" secondAttribute="centerX" id="Uym-Op-RqU"/>
                             <constraint firstItem="HBm-e4-Veq" firstAttribute="top" secondItem="ZTL-V5-ddh" secondAttribute="bottom" constant="10" id="hAC-WT-ZQs"/>
                             <constraint firstItem="iZE-Hu-NPD" firstAttribute="centerX" secondItem="xjA-Mc-Yvk" secondAttribute="centerX" id="ib7-mF-9kB"/>
                             <constraint firstItem="HBm-e4-Veq" firstAttribute="width" secondItem="vrI-7D-vKG" secondAttribute="width" multiplier="0.8" id="lHG-9Y-SOd"/>
                             <constraint firstItem="6Ts-hV-jXM" firstAttribute="centerX" secondItem="xjA-Mc-Yvk" secondAttribute="centerX" id="lmG-v7-aIW"/>
-                            <constraint firstItem="iZE-Hu-NPD" firstAttribute="top" secondItem="HBm-e4-Veq" secondAttribute="bottom" constant="10" id="nIr-CX-Lqj"/>
-                            <constraint firstItem="arK-J6-QIh" firstAttribute="centerX" secondItem="xjA-Mc-Yvk" secondAttribute="centerX" id="sBz-qw-fvH"/>
                             <constraint firstItem="iZE-Hu-NPD" firstAttribute="leading" secondItem="xjA-Mc-Yvk" secondAttribute="leading" constant="10" id="uDs-g0-3zO"/>
+                            <constraint firstItem="xjA-Mc-Yvk" firstAttribute="trailing" secondItem="iZE-Hu-NPD" secondAttribute="trailing" constant="10" id="uHJ-Cr-H8K"/>
+                            <constraint firstItem="arK-J6-QIh" firstAttribute="trailing" secondItem="iZE-Hu-NPD" secondAttribute="trailing" id="xH2-0o-e1M"/>
+                            <constraint firstItem="xjA-Mc-Yvk" firstAttribute="bottom" secondItem="r07-k5-GEA" secondAttribute="bottom" id="yGp-dH-bsC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xjA-Mc-Yvk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Capsules" id="oVG-hQ-b7R">
+                        <barButtonItem key="backBarButtonItem" title=" " id="9OY-b0-ayg"/>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="0cr-Nz-pRa">
                             <connections>
                                 <action selector="didPressSave" destination="LPC-ak-nBt" id="bIZ-ML-4to"/>
@@ -291,6 +315,7 @@
                     <connections>
                         <outlet property="capsulesListTableView" destination="iZE-Hu-NPD" id="laq-0m-tdd"/>
                         <outlet property="coffeeNameField" destination="HBm-e4-Veq" id="L0e-Ce-9jp"/>
+                        <outlet property="deleteRecipeButton" destination="r07-k5-GEA" id="XvD-Qa-YIG"/>
                         <outlet property="noCapsuleLabel" destination="6Ts-hV-jXM" id="Vey-gn-poc"/>
                     </connections>
                 </viewController>
@@ -325,6 +350,15 @@
                                     <action selector="stepperValueChanged:" destination="HJP-nH-WMv" eventType="valueChanged" id="Vbp-ZD-sfh"/>
                                 </connections>
                             </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxG-6j-Y1w">
+                                <rect key="frame" x="135.5" y="637" width="104" height="30"/>
+                                <state key="normal" title="Delete Capsule">
+                                    <color key="titleColor" red="0.80739288470000004" green="0.082518904800000001" blue="0.027154939539999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressDelete:" destination="HJP-nH-WMv" eventType="touchUpInside" id="zyi-2z-F0G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
@@ -333,7 +367,9 @@
                             <constraint firstItem="GUa-KN-TsK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="t8k-oS-m8K" secondAttribute="trailing" constant="10" id="JB8-ac-0bu"/>
                             <constraint firstItem="Wh9-rc-oZM" firstAttribute="centerY" secondItem="YC5-Cj-VB5" secondAttribute="centerY" id="S5x-cV-PWl"/>
                             <constraint firstItem="t8k-oS-m8K" firstAttribute="leading" secondItem="Wh9-rc-oZM" secondAttribute="leading" id="VzI-ym-vlW"/>
+                            <constraint firstItem="YC5-Cj-VB5" firstAttribute="bottom" secondItem="MxG-6j-Y1w" secondAttribute="bottom" id="Zsu-kQ-Ueh"/>
                             <constraint firstItem="t8k-oS-m8K" firstAttribute="top" secondItem="Wh9-rc-oZM" secondAttribute="bottom" constant="10" id="aTF-pG-Rr9"/>
+                            <constraint firstItem="MxG-6j-Y1w" firstAttribute="centerX" secondItem="YC5-Cj-VB5" secondAttribute="centerX" id="neE-r5-i9Z"/>
                             <constraint firstItem="Wh9-rc-oZM" firstAttribute="width" secondItem="mXZ-pQ-oSU" secondAttribute="width" multiplier="0.8" id="wJX-cB-QP3"/>
                             <constraint firstItem="GUa-KN-TsK" firstAttribute="trailing" secondItem="Wh9-rc-oZM" secondAttribute="trailing" id="yRs-gw-eJ1"/>
                         </constraints>
@@ -348,6 +384,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="capsuleNameTextField" destination="Wh9-rc-oZM" id="DMV-Te-hyS"/>
+                        <outlet property="deleteCapsuleButton" destination="MxG-6j-Y1w" id="sVI-Jg-u1L"/>
                         <outlet property="quantityLabel" destination="t8k-oS-m8K" id="Njs-QV-joM"/>
                         <outlet property="quantityStepper" destination="GUa-KN-TsK" id="5Dt-gv-jnC"/>
                     </connections>
@@ -361,5 +398,8 @@
         <image name="Capsula_Generica" width="225" height="225"/>
         <image name="Nescafe_Logo" width="400" height="400"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="lrk-X7-pXN"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
 </document>

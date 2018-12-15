@@ -15,7 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CapsulesListPresenter : NSObject <AddCapsuleDelegate>
 
 - (instancetype)initWithViewController:(CapsulesListViewController *)capsulesListController;
--(void)didPressSaveWithCoffeeName:(NSString *)coffeeName andCapsules:(NSArray *)capsulesArray;
+-(void)didPressSaveWithCoffeeName:(NSString *)coffeeName andCapsules:(NSArray *)capsulesArray isEditing:(BOOL)isEditing;
+- (void)deleteRecipe:(RecipeModel*)recipe;
+
+@property NSMutableArray <CapsuleModel *> *capsulesArray;
 
 @end
 

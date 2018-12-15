@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "AddCapsuleDelegate.h"
+#import "CapsuleModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AddCapsuleViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, weak) id<AddCapsuleDelegate> delegate;
+@property CapsuleModel *selectedCapsule;
 
 - (void)showNoNameAlert;
 

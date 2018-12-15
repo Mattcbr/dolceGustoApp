@@ -17,6 +17,8 @@
 		2F53441421582E3800BF0D77 /* MainScreenViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53441321582E3800BF0D77 /* MainScreenViewPresenter.m */; };
 		2F557D7421A4D1FF00FAFD81 /* DetailsScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F557D7321A4D1FF00FAFD81 /* DetailsScreenViewController.m */; };
 		2F557D7A21A4DAF900FAFD81 /* DetailsScreenPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F557D7921A4DAF900FAFD81 /* DetailsScreenPresenter.m */; };
+		2F6F1E6421BF3C8E00096C5E /* notificationsConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F1E6321BF3C8E00096C5E /* notificationsConstants.m */; };
+		2F6F1E6721BF491500096C5E /* NSString+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6F1E6621BF491500096C5E /* NSString+Validation.m */; };
 		2F8EF771214ED9730069FDDC /* MainScreenCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EF770214ED9730069FDDC /* MainScreenCollectionViewCell.m */; };
 		2F8EF776214EE4D30069FDDC /* MainScreenCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EF775214EE4D30069FDDC /* MainScreenCollectionViewController.m */; };
 		2FB2DD2C217271CF00B343B8 /* CapsulesListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB2DD2B217271CF00B343B8 /* CapsulesListTableViewCell.m */; };
@@ -73,6 +75,10 @@
 		2F557D7321A4D1FF00FAFD81 /* DetailsScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsScreenViewController.m; sourceTree = "<group>"; };
 		2F557D7821A4DAF900FAFD81 /* DetailsScreenPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsScreenPresenter.h; sourceTree = "<group>"; };
 		2F557D7921A4DAF900FAFD81 /* DetailsScreenPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsScreenPresenter.m; sourceTree = "<group>"; };
+		2F6F1E6221BF3C8E00096C5E /* notificationsConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = notificationsConstants.h; sourceTree = "<group>"; };
+		2F6F1E6321BF3C8E00096C5E /* notificationsConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = notificationsConstants.m; sourceTree = "<group>"; };
+		2F6F1E6521BF491500096C5E /* NSString+Validation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Validation.h"; sourceTree = "<group>"; };
+		2F6F1E6621BF491500096C5E /* NSString+Validation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validation.m"; sourceTree = "<group>"; };
 		2F842A3B217278E400B54A23 /* SaveRecipeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveRecipeDelegate.h; sourceTree = "<group>"; };
 		2F8EF76F214ED9730069FDDC /* MainScreenCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenCollectionViewCell.h; sourceTree = "<group>"; };
 		2F8EF770214ED9730069FDDC /* MainScreenCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenCollectionViewCell.m; sourceTree = "<group>"; };
@@ -208,6 +214,17 @@
 			path = "Details Screen";
 			sourceTree = "<group>";
 		};
+		2F6F1E6121BF3BD900096C5E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F6F1E6221BF3C8E00096C5E /* notificationsConstants.h */,
+				2F6F1E6321BF3C8E00096C5E /* notificationsConstants.m */,
+				2F6F1E6521BF491500096C5E /* NSString+Validation.h */,
+				2F6F1E6621BF491500096C5E /* NSString+Validation.m */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
 		2FB2DD2D2172720800B343B8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +266,7 @@
 				2F1C7870216D8A09007067E4 /* Models */,
 				2F009865219B958300957D3F /* Database */,
 				2F557D7121A4D1AE00FAFD81 /* Details Screen */,
+				2F6F1E6121BF3BD900096C5E /* Support Files */,
 				2FF43F0B2145AFB8004718C6 /* AppDelegate.h */,
 				2FF43F0C2145AFB9004718C6 /* AppDelegate.m */,
 				2FF43F112145AFB9004718C6 /* Main.storyboard */,
@@ -503,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6F1E6721BF491500096C5E /* NSString+Validation.m in Sources */,
 				2F1C786C216D8663007067E4 /* CapsulesListPresenter.m in Sources */,
 				2F557D7421A4D1FF00FAFD81 /* DetailsScreenViewController.m in Sources */,
 				2F1C7873216D8A2D007067E4 /* RecipeModel.m in Sources */,
@@ -513,6 +532,7 @@
 				2FF43F0D2145AFB9004718C6 /* AppDelegate.m in Sources */,
 				2F1C7868216D8604007067E4 /* AddCapsuleViewController.m in Sources */,
 				2F557D7A21A4DAF900FAFD81 /* DetailsScreenPresenter.m in Sources */,
+				2F6F1E6421BF3C8E00096C5E /* notificationsConstants.m in Sources */,
 				2F53441421582E3800BF0D77 /* MainScreenViewPresenter.m in Sources */,
 				2F8EF776214EE4D30069FDDC /* MainScreenCollectionViewController.m in Sources */,
 				2FB2DD2C217271CF00B343B8 /* CapsulesListTableViewCell.m in Sources */,

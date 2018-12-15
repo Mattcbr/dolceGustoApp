@@ -28,10 +28,6 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
     self.presenter = [[MainScreenViewPresenter alloc] initWithViewController:self];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    //Adicionar o metodo pra chamar o DB no presenter
-}
-
 #pragma mark - Add Button Handler
 -(IBAction)didPressAdd {
     [self.presenter didPressAdd];
@@ -46,20 +42,12 @@ static NSString * const reuseIdentifier = @"CoffeeCell";
      if ([segue.identifier isEqualToString:@"showAddScreenSegue"]) {
          CapsulesListViewController *destinationVC = segue.destinationViewController;
          destinationVC.delegate = [self.presenter createSaveRecipeDelegate];
-         destinationVC.screenType = @"Add";
      } else if ([segue.identifier isEqualToString:@"showDetailsScreenSegue"]) {
          DetailsScreenViewController *destinationVC = segue.destinationViewController;
-//         destinationVC.selectedRecipe =
-//         MainScreenCollectionViewCell *selectedCell = sender;
          NSArray *arrayOfPaths = self.collectionView.indexPathsForSelectedItems;
          NSIndexPath *selectedIndexPath = arrayOfPaths.firstObject;
          RecipeModel *selectedRecipe = [self.presenter.recipesArray objectAtIndex:selectedIndexPath.row];
-//         destinationVC =
          [destinationVC setSelectedRecipe:selectedRecipe];
-         
-         UIBarButtonItem *button = [[UIBarButtonItem alloc] init];
-         button.title = @"";
-         self.navigationItem.backBarButtonItem = button;
      }
 }
 

@@ -22,7 +22,7 @@
 
 -(void) getCapsulesForRecipe:(RecipeModel *)recipe {
     __weak typeof(self) weakSelf = self;
-    [weakSelf.dbManager getCapsulesForRecipeId:recipe.recipeId WithCompletion:^(NSMutableArray * _Nonnull capsulesArray) {
+    [self.dbManager getCapsulesForRecipeId:recipe.recipeId withCompletion:^(NSMutableArray * _Nonnull capsulesArray) {
         __strong typeof(self) strongSelf = weakSelf;
         [strongSelf didLoadCapsules:capsulesArray];
     }];

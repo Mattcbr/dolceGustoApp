@@ -12,5 +12,7 @@
 @protocol AddCapsuleDelegate <NSObject>
 
 - (void)addNewCapsule:(CapsuleModel *)capsule;
+- (void)editCapsule:(CapsuleModel *)capsule;
+- (void)deleteCapsule:(CapsuleModel *)capsule;
 
 @end

@@ -15,11 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CapsulesListViewController : UIViewController
 
 @property (nonatomic, weak) id<SaveRecipeDelegate> delegate;
-@property NSMutableArray<CapsuleModel *> *capsulesList;
-@property NSString *screenType;
+@property RecipeModel *recipe;
+@property NSMutableArray<CapsuleModel *> *capsulesArray;
 
--(void)updateCapsulesArray:(NSMutableArray *)array;
+-(void)didUpdateCapsulesArray;
 -(void)displayErrorWithType:(NSString *)type;
+- (NSUInteger)selectedCapsuleIndex;
 
 @end
 

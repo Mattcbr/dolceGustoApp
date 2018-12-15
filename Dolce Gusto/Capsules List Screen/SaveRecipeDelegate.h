@@ -11,7 +11,8 @@
 
 @protocol SaveRecipeDelegate <NSObject>
 
-- (void)addNewRecipe:(RecipeModel *)recipe;
+- (void)didChangeRecipesArray;
+- (void)deleteRecipe:(RecipeModel *)recipe;
 
 @end
 

@@ -19,5 +19,6 @@
 -(instancetype)initWithViewController: (MainScreenCollectionViewController *)viewController;
 -(id<SaveRecipeDelegate>)createSaveRecipeDelegate;
 -(void) didPressAdd;
+- (void)getRecipesFromDB;
 
 @end

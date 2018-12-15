@@ -12,10 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CapsuleModel : NSObject
 
-@property int *capsuleId;
+@property NSInteger capsuleId;
 @property NSString *capsuleName;
-@property NSInteger *capsuleQuantity;
-- (instancetype)initWithName:(NSString *)name andQuantity:(NSInteger *)quantity;
+@property NSInteger capsuleQuantity;
+@property NSInteger recipeId;
+
+- (instancetype)initWithName:(NSString *)name andQuantity:(NSInteger)quantity;
+- (instancetype)initWithId:(NSInteger)capsuleId name:(NSString *)name quantity:(NSInteger)quantity andRecipeId:(NSInteger)recipeId;
+- (void)addCapsuleId:(NSInteger)newCapsuleId andRecipeId:(NSInteger)newRecipeId;
 
 @end
 
